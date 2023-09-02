@@ -1,0 +1,43 @@
+---
+import DarkModeSwitcher from "./DarkModeSwitcher.astro";
+
+const links = [
+  {
+    label: "About me",
+    url: "/about-me",
+  },
+  {
+    label: "Portfolio",
+    url: "/portfolio",
+  },
+  {
+    label: "Blog",
+    url: "/blog",
+  },
+  {
+    label: "Contact",
+    url: "/contact",
+  },
+];
+---
+
+<header class="mb-17.5 flex flex-wrap items-center justify-between gap-8 py-4">
+  <a href="/" class="px-2.5 text-h1 text-primary">Leon Pahole</a>
+
+  <div class="flex items-center">
+    <nav>
+      <ul class="flex items-center">
+        {
+          links.map((link) => (
+            <li>
+              <a class="px-2.5 text-link" href={link.url}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <DarkModeSwitcher />
+  </div>
+</header>

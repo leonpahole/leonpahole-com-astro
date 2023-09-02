@@ -1,0 +1,38 @@
+---
+import EmailIcon from "../../../assets/icons/social/EmailIcon.astro";
+import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
+import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
+import TwitterIcon from "../../../assets/icons/social/TwitterIcon.astro";
+
+import SocialLinkContainer from "./SocialLinkContainer.astro";
+
+const iconClass =
+  "hover:text-primary hover:scale-105 box-content transition-transform duration-75 px-2.5 h-5 w-5";
+---
+
+<address class="flex w-full items-center justify-center gap-2.5">
+  <SocialLinkContainer
+    url="https://github.com/leonpahole"
+    alt="Github (opens in new tab)"
+  >
+    <GithubIcon class={iconClass} />
+  </SocialLinkContainer>
+
+  <SocialLinkContainer
+    url="https://www.linkedin.com/in/leon-pahole-089ab1248/"
+    alt="LinkedIn (opens in new tab)"
+  >
+    <LinkedinIcon class={iconClass} />
+  </SocialLinkContainer>
+
+  <SocialLinkContainer
+    url="https://twitter.com/leonpahole"
+    alt="Twitter (opens in new tab)"
+  >
+    <TwitterIcon class={iconClass} />
+  </SocialLinkContainer>
+
+  <SocialLinkContainer url="mailto:leon.pahole@gmail.com" alt="Email">
+    <EmailIcon class={iconClass} />
+  </SocialLinkContainer>
+</address>

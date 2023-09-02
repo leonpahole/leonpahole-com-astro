@@ -1,0 +1,13 @@
+/* light theme */
+:root {
+  --color-primary: #2400ff;
+  --color-text: #1a1a1a;
+  --color-background: #f5f5f5;
+}
+
+/* dark theme */
+:root[class~="dark"] {
+  --color-primary: #ffffa3;
+  --color-text: #f5f5f5;
+  --color-background: #363636;
+}
