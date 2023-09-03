@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Red Hat Mono Variable", ...defaultTheme.fontFamily.sans],
+        mono: ["Red Hat Mono Variable", ...defaultTheme.fontFamily.mono],
       },
       colors: {
         primary: {
@@ -41,13 +41,31 @@ module.exports = {
             fontWeight: 400,
           },
         ],
+        body: [
+          pxToRem(16),
+          {
+            fontWeight: 400,
+          },
+        ],
+        "link-big": [
+          pxToRem(18),
+          {
+            fontWeight: 600,
+          },
+        ],
       },
       maxWidth: {
         screen: pxToRem(800),
       },
       margin: {
         7.5: pxToRem(30),
+        12.5: pxToRem(50),
         17.5: pxToRem(70),
+      },
+      padding: {
+        0.75: pxToRem(3),
+        1.25: pxToRem(5),
+        15: pxToRem(60),
       },
     },
   },
