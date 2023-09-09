@@ -1,0 +1,21 @@
+---
+import type { BlogPostFrontmatter } from "../../types/blog-post";
+import BlogPostList from "./BlogPostList.astro";
+
+const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
+  "../../pages/posts/**/*.md",
+);
+
+const AmountOfLatestBlogPosts = 3;
+
+const latestBlogPosts = allBlogPosts
+  .sort((a, b) => {
+    const aDate = new Date(a.frontmatter.date);
+    const bDate = new Date(b.frontmatter.date);
+    return bDate.getTime() - aDate.getTime();
+  })
+  .slice(0, AmountOfLatestBlogPosts);
+---
+
+<h2 class="text-h2 uppercase text-primary">Latest blog posts</h2>
+<BlogPostList posts={latestBlogPosts.sort()} />

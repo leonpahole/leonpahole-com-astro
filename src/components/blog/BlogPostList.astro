@@ -1,0 +1,14 @@
+---
+import type { BlogPost } from "../../types/blog-post";
+import BlogPostListItem from "./BlogPostListItem.astro";
+
+interface Props {
+  posts: BlogPost[];
+}
+
+const { posts } = Astro.props;
+---
+
+<section>
+  {posts.map((post) => <BlogPostListItem post={post} />)}
+</section>

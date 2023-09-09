@@ -1,0 +1,29 @@
+---
+import type { BlogPost } from "../../types/blog-post";
+import BlogPostListItemCategories from "./BlogPostListItemCategories.astro";
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+---
+
+<article class="py-7.5">
+  <h3 class="text-h3">{post.frontmatter.title}</h3>
+  <div class="flex items-center gap-1.75">
+    <time class="text-details" datetime="{post.frontmatter.date}">
+      {post.frontmatter.date}
+    </time>
+     &#x2022;
+    <span class="text-details">{post.frontmatter.minutesRead} min</span>
+     &#x2022;
+    <BlogPostListItemCategories categories={post.frontmatter.categories} />
+  </div>
+
+  <p class="my-5 text-body">{post.frontmatter.excerpt}</p>
+
+  <a href={post.url} class="border-b border-text px-2.5 text-link">
+    Read full blog post &#x3e;&#x3e;
+  </a>
+</article>

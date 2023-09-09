@@ -29,6 +29,18 @@ module.exports = {
             fontWeight: 400,
           },
         ],
+        h2: [
+          pxToRem(28),
+          {
+            fontWeight: 400,
+          },
+        ],
+        h3: [
+          pxToRem(28),
+          {
+            fontWeight: 500,
+          },
+        ],
         link: [
           pxToRem(16),
           {
@@ -47,10 +59,22 @@ module.exports = {
             fontWeight: 400,
           },
         ],
+        details: [
+          pxToRem(14),
+          {
+            fontWeight: 300,
+          },
+        ],
         "link-big": [
           pxToRem(18),
           {
             fontWeight: 600,
+          },
+        ],
+        "blog-tag": [
+          pxToRem(16),
+          {
+            fontWeight: 300,
           },
         ],
       },
@@ -65,7 +89,11 @@ module.exports = {
       padding: {
         0.75: pxToRem(3),
         1.25: pxToRem(5),
+        7.5: pxToRem(30),
         15: pxToRem(60),
+      },
+      gap: {
+        1.75: pxToRem(7),
       },
     },
   },

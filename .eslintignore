@@ -37,3 +37,6 @@ package.json
 .prettierignore
 
 *.css
+*.jpg
+*.png
+*.md

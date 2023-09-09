@@ -1,0 +1,20 @@
+---
+interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+{
+  categories.map((category, i) => (
+    <>
+      <a href="/" class="border-b border-b-text text-blog-tag uppercase">
+        {category}
+      </a>
+      {i < categories.length - 1 && (
+        <span class="text-blog-tag uppercase">&#x2022;</span>
+      )}
+    </>
+  ))
+}
