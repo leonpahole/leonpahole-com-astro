@@ -2,12 +2,13 @@
 interface Props {
   url: string;
   alt: string;
+  class?: string;
 }
 
-const { url, alt } = Astro.props;
+const { url, alt, class: className } = Astro.props;
 ---
 
-<a href={url} target="_blank" rel="noopener noreferrer">
+<a href={url} target="_blank" rel="noopener noreferrer" class={className}>
   <span class="visually-hidden">{alt}</span>
   <slot />
 </a>

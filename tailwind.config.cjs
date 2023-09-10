@@ -95,6 +95,31 @@ module.exports = {
       gap: {
         1.75: pxToRem(7),
       },
+      animation: {
+        wiggle: "wiggle 3s linear infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": {
+            transform: "scale(1.1) translateY(0)",
+          },
+          "10%": {
+            transform: "scale(1.1,.9) translateY(0)",
+          },
+          "30%": {
+            transform: "scale(.9,1.1) translateY(-15px)",
+          },
+          "50%": {
+            transform: "scale(1.05,.95) translateY(0)",
+          },
+          "58%": {
+            transform: "scale(1,1) translateY(-7px)",
+          },
+          "65%": {
+            transform: "scale(1,1) translateY(0)",
+          },
+        },
+      },
     },
   },
   plugins: [],

@@ -7,18 +7,17 @@ const links = [
     url: "/about-me",
   },
   {
-    label: "Portfolio",
-    url: "/portfolio",
-  },
-  {
     label: "Blog",
     url: "/blog",
   },
   {
     label: "Contact",
-    url: "/contact",
+    url: "/?contact",
   },
 ];
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = "/" + pathname.slice(1);
 ---
 
 <header class="mb-17.5 flex flex-wrap items-center justify-between gap-8 py-4">
@@ -30,7 +29,12 @@ const links = [
         {
           links.map((link) => (
             <li>
-              <a class="px-2.5 text-link" href={link.url}>
+              <a
+                class={`border-x border-x-transparent px-2.5 text-link ${
+                  currentPath === link.url ? "border-x-primary" : ""
+                }`}
+                href={link.url}
+              >
                 {link.label}
               </a>
             </li>

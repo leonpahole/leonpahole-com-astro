@@ -14,6 +14,7 @@ const iconClass =
   <SocialLinkContainer
     url="https://github.com/leonpahole"
     alt="Github (opens in new tab)"
+    class="social-link"
   >
     <GithubIcon class={iconClass} />
   </SocialLinkContainer>
@@ -21,6 +22,7 @@ const iconClass =
   <SocialLinkContainer
     url="https://www.linkedin.com/in/leon-pahole-089ab1248/"
     alt="LinkedIn (opens in new tab)"
+    class="social-link"
   >
     <LinkedinIcon class={iconClass} />
   </SocialLinkContainer>
@@ -28,11 +30,33 @@ const iconClass =
   <SocialLinkContainer
     url="https://twitter.com/leonpahole"
     alt="Twitter (opens in new tab)"
+    class="social-link"
   >
     <TwitterIcon class={iconClass} />
   </SocialLinkContainer>
 
-  <SocialLinkContainer url="mailto:leon.pahole@gmail.com" alt="Email">
+  <SocialLinkContainer
+    url="mailto:leon.pahole@gmail.com"
+    alt="Email"
+    class="social-link"
+  >
     <EmailIcon class={iconClass} />
   </SocialLinkContainer>
 </address>
+
+<script is:inline>
+  const contact = new URL(document.location).searchParams.get("contact");
+  const indexClassMap = {
+    0: "animate-[wiggle_.7s_4_0ms]",
+    1: "animate-[wiggle_.7s_4_100ms]",
+    2: "animate-[wiggle_.7s_4_200ms]",
+    3: "animate-[wiggle_.7s_4_300ms]",
+  };
+
+  if (contact != null) {
+    const socialLinks = document.getElementsByClassName("social-link");
+    [...socialLinks].forEach((link, i) => {
+      link.classList.add(indexClassMap[i]);
+    });
+  }
+</script>
