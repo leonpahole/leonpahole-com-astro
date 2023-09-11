@@ -15,9 +15,9 @@ const { post } = Astro.props;
     <time class="text-details" datetime="{post.frontmatter.date}">
       {post.frontmatter.date}
     </time>
-     &#x2022;
+     •
     <span class="text-details">{post.frontmatter.minutesRead} min</span>
-     &#x2022;
+     •
     <BlogPostListItemCategories categories={post.frontmatter.categories} />
   </div>
 

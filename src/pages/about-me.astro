@@ -1,5 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutMeIntro from "../components/about-me/AboutMeIntro.astro";
+import WorkValues from "../components/about-me/WorkValues.astro";
+import WhatIWorkedWith from "../components/about-me/WhatIWorkedWith/WhatIWorkedWith.astro";
+import CareerOverview from "../components/about-me/CareerOverview/CareerOverview.astro";
 ---
 
-<Layout title="About me | Leon Pahole" />
+<Layout title="About me | Leon Pahole">
+  <AboutMeIntro />
+  <WorkValues />
+  <WhatIWorkedWith />
+  <CareerOverview />
+</Layout>
+
+<script src="../components/about-me/script-hover.ts"></script>

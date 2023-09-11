@@ -1,0 +1,12 @@
+---
+import { experience } from "../../../data/experience";
+import CareerItem from "./CareerItem.astro";
+---
+
+<section class="mt-12.5 pt-7.5">
+  <h2 class="mb-10 text-h2 uppercase text-primary">Career overview</h2>
+
+  <div class="flex flex-col gap-3">
+    {experience.map((experience) => <CareerItem experience={experience} />)}
+  </div>
+</section>

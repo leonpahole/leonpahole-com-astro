@@ -1,0 +1,12 @@
+---
+import { skillGroups } from "../../../data/experience";
+import SkillGroup from "./SkillGroup.astro";
+---
+
+<section class="mb-12.5">
+  <h2 class="mb-5 text-h2 uppercase text-primary">What I've worked with</h2>
+
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {skillGroups.map((group) => <SkillGroup group={group} />)}
+  </div>
+</section>

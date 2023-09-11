@@ -30,8 +30,10 @@ const currentPath = "/" + pathname.slice(1);
           links.map((link) => (
             <li>
               <a
-                class={`border-x border-x-transparent px-2.5 text-link ${
-                  currentPath === link.url ? "border-x-primary" : ""
+                class={`border-x px-2.5 text-link ${
+                  currentPath === link.url
+                    ? "border-x-primary"
+                    : "border-x-transparent"
                 }`}
                 href={link.url}
               >

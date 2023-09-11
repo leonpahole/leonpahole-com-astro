@@ -77,6 +77,12 @@ module.exports = {
             fontWeight: 300,
           },
         ],
+        technologies: [
+          pxToRem(20),
+          {
+            fontWeight: 500,
+          },
+        ],
       },
       maxWidth: {
         screen: pxToRem(800),
@@ -90,6 +96,7 @@ module.exports = {
         0.75: pxToRem(3),
         1.25: pxToRem(5),
         7.5: pxToRem(30),
+        12.5: pxToRem(50),
         15: pxToRem(60),
       },
       gap: {
