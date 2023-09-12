@@ -17,6 +17,7 @@ module.exports = {
         },
         text: {
           DEFAULT: "var(--color-text)",
+          inverted: "var(--color-text-inverted)",
         },
         background: {
           DEFAULT: "var(--color-background)",

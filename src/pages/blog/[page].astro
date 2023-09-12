@@ -1,0 +1,36 @@
+---
+import { BlogPostFrontmatter } from "../../types/blog-post";
+import BlogPostList from "../../components/blog/BlogPostList.astro";
+import BlogPostListPagination from "../../components/blog/BlogPostListPagination.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
+    "../../pages/posts/**/*.md",
+  );
+
+  allBlogPosts.sort((a, b) => {
+    const aDate = new Date(a.frontmatter.date);
+    const bDate = new Date(b.frontmatter.date);
+    return bDate.getTime() - aDate.getTime();
+  });
+
+  return paginate(allBlogPosts, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={`Blog - page ${page.currentPage} | Leon Pahole`}>
+  <h2 class="text-h2 uppercase text-primary">
+    All posts{page.currentPage > 1 ? ` - page ${page.currentPage}` : ""}
+  </h2>
+
+  <BlogPostList posts={page.data} />
+
+  <BlogPostListPagination
+    currentPage={page.currentPage}
+    totalPages={page.lastPage}
+    getPageUrl={(page) => `/blog/${page}`}
+  />
+</Layout>

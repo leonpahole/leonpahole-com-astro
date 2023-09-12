@@ -9,4 +9,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
+  redirects: {
+    "/blog": "/blog/1",
+  },
 });

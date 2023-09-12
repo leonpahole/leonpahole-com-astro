@@ -31,7 +31,7 @@ const currentPath = "/" + pathname.slice(1);
             <li>
               <a
                 class={`border-x px-2.5 text-link ${
-                  currentPath === link.url
+                  currentPath.startsWith(link.url)
                     ? "border-x-primary"
                     : "border-x-transparent"
                 }`}

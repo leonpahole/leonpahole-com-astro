@@ -1,0 +1,33 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  // eslint-disable-next-line
+  getPageUrl: (page: number) => string;
+}
+
+const { currentPage, totalPages, getPageUrl } = Astro.props;
+
+const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+
+<div class="mt-10 flex items-center justify-center gap-2.5">
+  {
+    pageNumbers.map((number) => {
+      const isCurrentPage = number === currentPage;
+
+      return (
+        <a
+          href={getPageUrl(number)}
+          class={`flex h-6 w-6 items-center justify-center rounded-full border p-0.5 text-body ${
+            isCurrentPage
+              ? "border-primary bg-primary text-text-inverted"
+              : "border-text text-text"
+          }`}
+        >
+          {number}
+        </a>
+      );
+    })
+  }
+</div>
