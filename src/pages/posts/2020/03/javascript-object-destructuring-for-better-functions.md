@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Javascript object destructuring for readable functions"
 excerpt: "In my opinion, a function (or a method) in any programming language should be clearly understandable just by its header - name and parameters. In Javascript, we sometimes create functions that accept objects, which can be more convenient, but this sacrifices readability of the function header. In this blog post I present ES6 object destructuring as a solution to this problem."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-03-16"
 slug: javascript-object-destructuring-for-better-functions
 cover_image:
-  src: "../../assets/covers/javascript-destructuring-cover.jpg"
+  src: "/src/assets/blog/covers/javascript-destructuring-cover.jpg"
   alt: "JavaScript code"
   credit_text: "James Harrison on Unsplash"
   credit_link: "https://unsplash.com/@jstrippa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

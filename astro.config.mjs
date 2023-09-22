@@ -2,14 +2,13 @@ import { defineConfig } from "astro/config";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 import tailwind from "@astrojs/tailwind";
+import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [tailwind(), astroImageTools],
   markdown: {
     remarkPlugins: [remarkReadingTime],
-  },
-  redirects: {
-    "/blog": "/blog/1",
+    syntaxHighlight: "prism",
   },
 });

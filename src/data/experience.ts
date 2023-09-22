@@ -28,22 +28,12 @@ export interface ExperienceEntry {
   to?: string;
 }
 
-const AspNetMvc4: Skill = {
-  id: "asp-net-mvc-4",
-  name: "ASP.NET MVC 4",
-  group: SkillType.Backend,
-};
+/* databases */
 
 const Postgres: Skill = {
   id: "postgres",
   name: "PostgreSQL",
   group: SkillType.Database,
-};
-
-const CSharp: Skill = {
-  id: "c-sharp",
-  name: "C#",
-  group: SkillType.ProgrammingLanguages,
 };
 
 const ArangoDB: Skill = {
@@ -52,16 +42,122 @@ const ArangoDB: Skill = {
   group: SkillType.Database,
 };
 
+/* programming languages */
+
+const CSharp: Skill = {
+  id: "c-sharp",
+  name: "C#",
+  group: SkillType.ProgrammingLanguages,
+};
+
+const JavaScript: Skill = {
+  id: "javascript",
+  name: "JavaScript",
+  group: SkillType.ProgrammingLanguages,
+};
+
+const TypeScript: Skill = {
+  id: "typescript",
+  name: "TypeScript",
+  group: SkillType.ProgrammingLanguages,
+};
+
+const Java: Skill = {
+  id: "java",
+  name: "Java",
+  group: SkillType.ProgrammingLanguages,
+};
+
+const Kotlin: Skill = {
+  id: "kotlin",
+  name: "Kotlin",
+  group: SkillType.ProgrammingLanguages,
+};
+
+/* backend frameworks */
+
+const AspNetMvc4: Skill = {
+  id: "asp-net-mvc-4",
+  name: "ASP.NET MVC 4",
+  group: SkillType.Backend,
+};
+
 const NodeJS: Skill = {
   id: "node-js",
   name: "NodeJS",
   group: SkillType.Backend,
 };
 
+/* frontend frameworks */
+
+const React: Skill = {
+  id: "react",
+  name: "React",
+  group: SkillType.Frontend,
+};
+
+const ReactNative: Skill = {
+  id: "react-native",
+  name: "React Native",
+  group: SkillType.Mobile,
+};
+
+const Angular: Skill = {
+  id: "angular",
+  name: "Angular",
+  group: SkillType.Frontend,
+};
+
+const Xamarin: Skill = {
+  id: "xamarin",
+  name: "Xamarin",
+  group: SkillType.Mobile,
+};
+
+const NextJS: Skill = {
+  id: "next-js",
+  name: "NextJS",
+  group: SkillType.Frontend,
+};
+
+/* cloud */
+
+const AWS: Skill = {
+  id: "aws",
+  name: "AWS",
+  group: SkillType.Cloud,
+};
+
+/* devops */
+
+const Docker: Skill = {
+  id: "docker",
+  name: "Docker",
+  group: SkillType.DevOps,
+};
+
+const Traefik: Skill = {
+  id: "traefik",
+  name: "Traefik",
+  group: SkillType.DevOps,
+};
+
+const Ansible: Skill = {
+  id: "ansible",
+  name: "Ansible",
+  group: SkillType.DevOps,
+};
+
+const Terraform: Skill = {
+  id: "terraform",
+  name: "Terraform",
+  group: SkillType.DevOps,
+};
+
 export const experience: ExperienceEntry[] = [
   {
     company: "U-centrix",
-    role: "Software developer",
+    role: "Full-stack web developer",
     skills: [Postgres, NodeJS, ArangoDB],
     description:
       "<p>I started working as a backend engineer, before expanding into frontend development, mobile app development, cloud, and DevOps. I also did a lot of technical research to improve the products of the company and to pass the knowledge to my coworkers. Eventually, I became a tech lead and a project manager on 4 different projects, related to tourism, the gaming industry, and logistics. I helped improve project management, operations, and communications while learning about the business side of the software world. The largest team that I led was comprised of 7 people.</p>",

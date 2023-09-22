@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "How I handle frontend errors"
 excerpt: "Programmers disagree on many things, but one thing we can all get behind is that error handling is important. This blog post showcases how I handle frontend errors, associated with API calls, in a way that is readable, maintainable, and easy to use."
 categories:
@@ -8,7 +9,7 @@ categories:
 date: "2023-07-30"
 slug: how-i-handle-frontend-errors
 cover_image:
-  src: "../../assets/covers/how-i-handle-frontend-errors-cover.jpg"
+  src: "/src/assets/blog/covers/how-i-handle-frontend-errors-cover.jpg"
   alt: ""
   credit_text: "David Pupăză on Unsplash"
   credit_link: "https://unsplash.com/@davfts?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
@@ -69,8 +70,6 @@ The code example below demonstrates this. The code sample is shortened for brevi
 - I am using the Formik setup described in [this blog post](/blog/making-reactjs-forms-simple-with-formik-custom-inputs)
 - The folders are structured according to [this blog post](/blog/frontend-server-communication-structure)
 - The API requests are mocked with axios-mock-adapter inside [rest-mock.ts](https://github.com/leonpahole/error-handling-react-demo/blob/main/src/util/rest/rest-mock.ts).
-
-<br />
 
 ```tsx
 /* imports, validation schema and login model */
@@ -173,8 +172,6 @@ The code above handles the errors properly, but it has several downsides:
 - It is not typesafe and is vulnerable to accidental typos.
 - It is quite long and one could argue that such logic isn't suitable for an UI component.
 - It makes it hard to have an overview of error handling in the app, as the logic is scattered across the UI components.
-
-<br />
 
 ## My solution to handling errors on the frontend
 
@@ -371,8 +368,6 @@ export namespace AuthService {
 }
 ```
 
-<br />
-
 ### The framework code
 
 Here's the code for [error-handling.ts](https://github.com/leonpahole/error-handling-react-demo/blob/main/src/util/shared/error-handling.ts).
@@ -486,8 +481,6 @@ I've been using this approach to error handling for a while now, and I'm very sa
 - Error handling is centralized, and it's easy to add new errors.
 - Whenever the backend changes, I know exactly where to look to make the change.
 - The code is in general more readable, because the complex logic is abstracted away in the framework.
-
-<br />
 
 ### Conclusion and sample repo
 

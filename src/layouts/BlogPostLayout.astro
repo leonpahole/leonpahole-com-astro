@@ -1,0 +1,54 @@
+---
+import "../styles/blog.css";
+import "prism-theme-vars/base.css";
+
+import BlogPostListItemInfoBar from "../components/blog/BlogPostListItemInfoBar.astro";
+import type { BlogPostFrontmatter } from "../types/blog-post";
+import Layout from "./Layout.astro";
+import type { MarkdownLayoutProps } from "astro";
+import { Picture } from "astro-imagetools/components";
+
+type Props = MarkdownLayoutProps<BlogPostFrontmatter>;
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout
+  title={frontmatter.title}
+  description={frontmatter.excerpt}
+  socialCard={{
+    title: frontmatter.title,
+    description: frontmatter.excerpt,
+    image: frontmatter.cover_image.src,
+    type: "article",
+  }}
+>
+  <h1 class="text-h2 uppercase text-primary">{frontmatter.title}</h1>
+  <BlogPostListItemInfoBar post={frontmatter} />
+
+  <div class="my-5">
+    <div class="aspect-image overflow-hidden rounded-2xl">
+      <Picture src={frontmatter.cover_image.src} alt="" layout="fill" />
+    </div>
+    <p class="mt-1 text-center text-details">
+      Cover image source: <a
+        class="underline"
+        href={frontmatter.cover_image.credit_link}
+        target="_blank"
+      >
+        {frontmatter.cover_image.credit_text}
+      </a>
+    </p>
+  </div>
+
+  <div class="text-body">
+    <section class="mb-5 border-b border-dotted border-b-text pb-7.5">
+      <span class="text-primary">Post contents:{" "}</span>
+      {frontmatter.excerpt}
+    </section>
+
+    <div class="blog-content">
+      <slot />
+    </div>
+  </div>
+</Layout>

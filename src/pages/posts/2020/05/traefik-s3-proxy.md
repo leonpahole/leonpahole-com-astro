@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Traefik v2: proxy requests to AWS S3 to serve a static site, non-www to www redirect"
 excerpt: "Following up from my previous blog post about the base setup of Traefik v2, I will now show how easy it is to set up Traefik as a reverse proxy to an AWS S3 bucket and redirect www to non-www."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-05-02"
 slug: traefik-s3-proxy
 cover_image:
-  src: "../../assets/covers/traefik-cover.png"
+  src: "/src/assets/blog/covers/traefik-cover.png"
   alt: "Traefik"
   credit_text: "https://doc.traefik.io/traefik/"
   credit_link: "https://doc.traefik.io/traefik/"

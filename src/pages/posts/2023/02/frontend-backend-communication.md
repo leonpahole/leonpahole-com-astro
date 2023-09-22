@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "How I structure my front-end projects for communication with the server"
 excerpt: "In this blog post I present a simple layered structure that I use on the front-end to simplify and streamline the communication with the server and all the processes behind it."
 categories:
@@ -8,7 +9,7 @@ categories:
 date: "2023-02-26"
 slug: frontend-server-communication-structure
 cover_image:
-  src: "../../assets/covers/frontend-server-communication-structure-cover.jpg"
+  src: "/src/assets/blog/covers/frontend-server-communication-structure-cover.jpg"
   alt: ""
   credit_text: "Chinh Le Duc on Unsplash"
   credit_link: "https://unsplash.com/es/@mero_dnt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

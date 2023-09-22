@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Handling stressful situations, part 2: Maintaining composure and performing in the moment"
 excerpt: "This blog post is part of a series on how I handle stressful and difficult situations to stay calm and collected, perform to the best of my abilities, and grow from the experience. In this post, I discuss the techniques for staying calm and perform well during stressful moments."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-08-26"
 slug: handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment
 cover_image:
-  src: "../../assets/covers/handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment-cover.jpg"
+  src: "/src/assets/blog/covers/handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment-cover.jpg"
   alt: ""
   credit_text: "Product School"
   credit_link: "https://unsplash.com/@productschool?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

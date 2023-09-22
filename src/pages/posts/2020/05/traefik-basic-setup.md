@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Traefik v2 base setup: HTTP to HTTPS, automatic SSL certificates and securing the dashboard"
 excerpt: "I will present a traefik.toml file and docker-compose configuration to set up Traefik v2 with most important features: auto SSL, global HTTP to HTTPS redirection and secure dashboard."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-05-02"
 slug: traefik-basic-setup
 cover_image:
-  src: "../../assets/covers/traefik-cover.png"
+  src: "/src/assets/blog/covers/traefik-cover.png"
   alt: "Traefik"
   credit_text: "https://doc.traefik.io/traefik/"
   credit_link: "https://doc.traefik.io/traefik/"

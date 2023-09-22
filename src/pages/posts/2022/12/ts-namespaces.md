@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Using TypeScript namespaces for better code organization in ES modules"
 excerpt: "JavaScript's ES modules are a great way to organize code into separate files and keep the code clean. I have noticed however that as projects get larger, it gets harder and harder to keep mental track of the code and assign proper names to identifiers. In this blog post, I present TypeScript namespaces as one of the solutions to this problem."
 categories:
@@ -7,7 +8,7 @@ categories:
 date: "2022-12-04"
 slug: ts-namespaces
 cover_image:
-  src: "../../assets/covers/ts-namespaces-cover.jpg"
+  src: "/src/assets/blog/covers/ts-namespaces-cover.jpg"
   alt: ""
   credit_text: "Patrick Perkins on Unsplash"
   credit_link: "https://unsplash.com/@patrickperkins?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

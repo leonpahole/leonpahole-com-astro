@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "How to manage TypeScript enums to prevent maintainability issues"
 excerpt: "Enums are a great way to restrict values of variables to a limited set of chosen constants. This makes the code more readable and less error-prone, as we no longer need to use magic numbers. However, enums can also cause our code to become hard to read and maintain as our codebase expands. In this blog post I describe how I solve these concerns in TypeScript."
 categories:
@@ -7,8 +8,8 @@ categories:
 date: "2022-10-22"
 slug: managing-ts-enums
 cover_image:
-  src: "../../assets/covers/managing-ts-enums-cover.jpg"
-  alt: "Source code"
+  src: "/src/assets/blog/covers/managing-ts-enums-cover.jpg"
+  alt: ""
   credit_text: "Joan Gamell on Unsplash"
   credit_link: "https://unsplash.com/@gamell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---
@@ -112,7 +113,7 @@ Here we leverage the power of the JavaScript bracket notation for dynamic proper
 
 In addition, the mapper object has an explicit type of `Record<AggregationMethod, string>`, which means we are declaring an object with keys of type `AggregationMethod` and values of type `string`. This forces us to specify all enum values in the keys of the object; otherwise Typescript will refuse to compile:
 
-![An image showing an error due to a missing enum type in the mapper object](../../assets/images/managing-ts-enums/ts-enum-mapper-error.png)
+![An image showing an error due to a missing enum type in the mapper object](/src/assets/blog/images/managing-ts-enums/ts-enum-mapper-error.png)
 
 This makes sure that we will never forget to add a new value into the mapper whenever we create a new enum value.
 

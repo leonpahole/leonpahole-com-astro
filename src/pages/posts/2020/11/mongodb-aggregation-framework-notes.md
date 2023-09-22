@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "MongoDB: aggregation framework"
 excerpt: "This blog posts includes some notes I took while studying the aggregation framework at the MongoDB university."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-11-01"
 slug: mongodb-aggregation-framework-notes
 cover_image:
-  src: "../../assets/covers/data-cover.jpg"
+  src: "/src/assets/blog/covers/data-cover.jpg"
   alt: "Data"
   credit_text: "Mika Baumeister on Unsplash"
   credit_link: "https://unsplash.com/@mbaumi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

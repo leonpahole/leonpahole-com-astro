@@ -3,30 +3,79 @@ import { SEO } from "astro-seo";
 
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/footer/Footer.astro";
+import LeonPaholeImage from "../assets/images/LeonPahole.png";
 
 import "@fontsource-variable/red-hat-mono";
 
 import "../styles/colors.css";
 import "../styles/utils.css";
 interface Props {
-  title: string;
+  title?: string;
+  description?: string;
+  socialCard?: {
+    title?: string;
+    type?: "website" | "article";
+    image?: string;
+    description?: string;
+  };
 }
 
-const { title } = Astro.props;
+const {
+  title: titleProp,
+  description: descriptionProp,
+  socialCard: socialCardProp,
+} = Astro.props;
+
+const description =
+  descriptionProp ??
+  "Hi, I'm Leon. I'm a full-stack developer who places a strong emphasis on soft skills. I have 6 years of experience in frontend, backend, mobile, devops, and cloud. I was also a project manager, a team lead, a lecturer and a mentor.";
+
+const title =
+  (titleProp ? `${titleProp} | ` : "") +
+  "Leon Pahole - Full-stack Web Developer";
+
+const socialCard = {
+  title: socialCardProp?.title ?? title,
+  type: socialCardProp?.type ?? "website",
+  image: socialCardProp?.image ?? LeonPaholeImage.src,
+  description: socialCardProp?.description ?? description,
+};
+
+const TwitterUsername = "@LeonPahole";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <SEO title={title} noindex />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: socialCard.title,
+          type: socialCard.type ?? "website",
+          image: socialCard.image ?? LeonPaholeImage.src,
+        },
+        optional: {
+          description: socialCard.description,
+        },
+      }}
+      twitter={{
+        creator: TwitterUsername,
+        title: socialCard.title,
+        image: socialCard.image,
+        description: socialCard.description,
+        card: "summary",
+      }}
+    />
 
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body class="bg-background font-mono text-text">
-    <div class="mx-auto box-content max-w-screen px-8">
+  <body class="min-w-[320px] bg-background font-mono text-text">
+    <div class="mx-auto box-content max-w-screen px-4 md:px-8">
       <Navbar />
       <main>
         <slot />

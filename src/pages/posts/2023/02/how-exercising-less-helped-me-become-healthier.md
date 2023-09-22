@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "How exercising less intensely helped me become healthier"
 excerpt: "Exercise - we all know we have to do it, but the thought of spending hours upon hours in the gym doing painful and intense exercises doesn't exactly sound the most inviting. Still, I kept up with a pretty intense exercise routine for many years - until I decided to bring it down a notch. I made my workouts shorter and less intense, which made me the healthiest I've ever been. But how? It sounds paradoxical - shouldn't exercising less make me less healthy?"
 categories:
@@ -7,7 +8,7 @@ categories:
 date: "2023-02-05"
 slug: how-exercising-less-intensely-helped-me-become-healthier
 cover_image:
-  src: "../../assets/covers/how-exercising-less-intensely-helped-me-become-healthier-cover.jpg"
+  src: "/src/assets/blog/covers/how-exercising-less-intensely-helped-me-become-healthier-cover.jpg"
   alt: ""
   credit_text: "Bruno Nascimento on Unsplash"
   credit_link: "https://unsplash.com/@bruno_nascimento?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

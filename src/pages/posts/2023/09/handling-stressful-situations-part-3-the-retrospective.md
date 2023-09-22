@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Handling stressful situations, part 3: The retrospective"
 excerpt: "This blog post is part of a series on how I handle stressful and difficult situations to stay calm and collected, perform to the best of my abilities, and grow from the experience. In this post, I discuss the retrospective that I conduct after a stressful situation, which helps me to learn from the experience and grow."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-09-02"
 slug: handling-stressful-situations-part-3-the-retrospective
 cover_image:
-  src: "../../assets/covers/handling-stressful-situations-part-3-the-retrospective-cover.jpg"
+  src: "/src/assets/blog/covers/handling-stressful-situations-part-3-the-retrospective-cover.jpg"
   alt: ""
   credit_text: "Flash Dantz"
   credit_link: "https://unsplash.com/@flashdantz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

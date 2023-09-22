@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Traefik v2: IP whitelist for Docker containers (allowing only specified IP addresses)"
 excerpt: "In this blog post I provide an example on how to set up IP whitelist for Docker containers, such as database interfaces and private monitoring dashboards using Traefik v2."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-11-07"
 slug: traefik-ip-whitelist
 cover_image:
-  src: "../../assets/covers/traefik-cover.png"
+  src: "/src/assets/blog/covers/traefik-cover.png"
   alt: "Traefik"
   credit_text: "https://doc.traefik.io/traefik/"
   credit_link: "https://doc.traefik.io/traefik/"

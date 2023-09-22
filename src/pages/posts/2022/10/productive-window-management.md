@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Alt-tab is not good enough: managing windows productively"
 excerpt: "In this blog post I'll be detailing my journey through finding a good window management solution, while also describing an important concept underlying all productivity-boosting techniques."
 categories:
@@ -7,8 +8,8 @@ categories:
 date: "2022-10-29"
 slug: productive-window-management
 cover_image:
-  src: "../../assets/covers/productive-window-management-cover.jpg"
-  alt: "Windows"
+  src: "/src/assets/blog/covers/productive-window-management-cover.jpg"
+  alt: ""
   credit_text: "R Mo on Unsplash"
   credit_link: "https://unsplash.com/ja/@mooo3721?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---

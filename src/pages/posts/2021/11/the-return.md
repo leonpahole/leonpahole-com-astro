@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "The Return……"
 excerpt: "What a magical coincidence, it's been exactly a year since I've published a blog post! No, I haven't given up on my blog and I haven't changed careers. Suffice to say, I have had an interesting year, with many ups and downs, but most importantly - lessons learned."
 categories:
@@ -6,8 +7,8 @@ categories:
 date: "2021-11-07"
 slug: the-return
 cover_image:
-  src: "../../assets/covers/cat-cover.jpg"
-  alt: "Just a cat"
+  src: "/src/assets/blog/covers/cat-cover.jpg"
+  alt: ""
   credit_text: "Manja Vitolic on Unsplash"
   credit_link: "https://unsplash.com/@madhatterzone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---

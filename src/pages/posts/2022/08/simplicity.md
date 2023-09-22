@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "How simplicity became my guiding light"
 excerpt: "This is a story of how over the years my life naturally gravitated towards simplicity, starting with my career, and then propagating into my everyday life."
 categories:
@@ -6,8 +7,8 @@ categories:
 date: "2022-08-06"
 slug: simplicity
 cover_image:
-  src: "../../assets/covers/simplicity-cover.jpg"
-  alt: "Keep things simple"
+  src: "/src/assets/blog/covers/simplicity-cover.jpg"
+  alt: ""
   credit_text: "Brett Jordan on Unsplash"
   credit_link: "https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---

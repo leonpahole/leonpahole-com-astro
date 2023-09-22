@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "I'm not afraid to not know things anymore"
 excerpt: "Knowledge is an asset. The passion to learn can be a great trait until it turns into insecurity or stress. In this blog post, I describe my struggle with the fear of not knowing things, and my new learning system, which allows me to focus on things that matter and sleep better at night."
 categories:
@@ -7,8 +8,8 @@ categories:
 date: "2021-11-14"
 slug: i-am-not-afraid-to-not-know-things-anymore
 cover_image:
-  src: "../../assets/covers/knowledge-cover.jpg"
-  alt: "Books"
+  src: "/src/assets/blog/covers/knowledge-cover.jpg"
+  alt: ""
   credit_text: "Patrick Tomasso on Unsplash"
   credit_link: "https://unsplash.com/@impatrickt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---

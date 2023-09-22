@@ -1,0 +1,80 @@
+---
+import type { BlogPostFrontmatter } from "../../../../types/blog-post";
+import {
+  getCategorySlug,
+  getCategoryNameFromSlug,
+} from "../../../../types/blog-post";
+import BlogPostList from "../../../../components/blog/BlogPostList.astro";
+import BlogPostListPagination from "../../../../components/blog/BlogPostListPagination.astro";
+import Layout from "../../../../layouts/Layout.astro";
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
+    "../../../../pages/posts/**/*.md",
+  );
+
+  allBlogPosts.sort((a, b) => {
+    const aDate = new Date(a.frontmatter.date);
+    const bDate = new Date(b.frontmatter.date);
+    return bDate.getTime() - aDate.getTime();
+  });
+
+  const allUniqueCategories = [
+    ...new Set(
+      allBlogPosts
+        .map((post) => post.frontmatter.categories)
+        .flat()
+        .map(getCategorySlug),
+    ),
+  ];
+
+  return allUniqueCategories.flatMap((category) => {
+    const allBlogPostsInCategory = allBlogPosts.filter((post) =>
+      post.frontmatter.categories.some(
+        (postCategory) => getCategorySlug(postCategory) === category,
+      ),
+    );
+
+    const paginated = paginate(allBlogPostsInCategory, {
+      pageSize: 10,
+      params: { category },
+    });
+
+    return paginated;
+  });
+};
+
+const { page } = Astro.props;
+const { category } = Astro.params;
+
+const categoryName = getCategoryNameFromSlug(category!);
+---
+
+<Layout
+  title={`Blogs with category ${categoryName}${
+    page.currentPage > 1 ? ` - page ${page.currentPage}` : ""
+  }`}
+  description="Leon Pahole's blog. I write about web development, JavaScript, TypeScript, React, and more."
+  socialCard={{
+    title: `Blogs with category ${categoryName} | Leon Pahole - Web Developer`,
+    description:
+      "Leon Pahole's blog. I write about web development, JavaScript, TypeScript, React, and more.",
+  }}
+>
+  <h2 class="text-h2 uppercase text-primary">
+    <a href="/blog">
+      &#x3c;&#x3c; {categoryName}{
+        page.currentPage > 1 ? ` - page ${page.currentPage}` : ""
+      }
+    </a>
+  </h2>
+
+  <BlogPostList posts={page.data} />
+
+  <BlogPostListPagination
+    currentPage={page.currentPage}
+    totalPages={page.lastPage}
+    getPageUrl={(page) => `/blog/${page}`}
+  />
+</Layout>

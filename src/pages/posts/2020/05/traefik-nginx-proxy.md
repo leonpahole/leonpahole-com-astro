@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Traefik v2: connect Nginx Docker container to Traefik"
 excerpt: "Following up from my previous blog post about the base setup of Traefik v2, I will now show how easy it is to connect a Nginx Docker container to Traefik."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-05-02"
 slug: traefik-nginx-proxy
 cover_image:
-  src: "../../assets/covers/traefik-cover.png"
+  src: "/src/assets/blog/covers/traefik-cover.png"
   alt: "Traefik"
   credit_text: "https://doc.traefik.io/traefik/"
   credit_link: "https://doc.traefik.io/traefik/"

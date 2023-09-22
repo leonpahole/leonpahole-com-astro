@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "I've learned a lot about learning in 2022; 2023 will be the year of going back to basics"
 excerpt: "A short retrospective of my learning journey in 2022 and plans for 2023."
 categories:
@@ -8,7 +9,7 @@ categories:
 date: "2022-12-30"
 slug: 2022-retrospective-2023-plans
 cover_image:
-  src: "../../assets/covers/2022-retrospective-2023-plans-cover.jpg"
+  src: "/src/assets/blog/covers/2022-retrospective-2023-plans-cover.jpg"
   alt: ""
   credit_text: "Joanna Kosinska on Unsplash"
   credit_link: "https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

@@ -20,17 +20,19 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = "/" + pathname.slice(1);
 ---
 
-<header class="mb-17.5 flex flex-wrap items-center justify-between gap-8 py-4">
+<header
+  class="mb-8 flex flex-col flex-wrap items-center justify-between gap-2 py-4 md:mb-17.5 md:flex-row md:gap-8"
+>
   <a href="/" class="px-2.5 text-h1 text-primary">Leon Pahole</a>
 
-  <div class="flex items-center">
+  <div class="flex flex-col items-center gap-4 sm:flex-row sm:gap-0">
     <nav>
-      <ul class="flex items-center">
+      <ul class="flex flex-col items-center gap-3 xs:flex-row">
         {
           links.map((link) => (
-            <li>
+            <li class="flex-shrink-0">
               <a
-                class={`border-x px-2.5 text-link ${
+                class={`border-x px-4 text-link md:px-2.5 ${
                   currentPath.startsWith(link.url)
                     ? "border-x-primary"
                     : "border-x-transparent"

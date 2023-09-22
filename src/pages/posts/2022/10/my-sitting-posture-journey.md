@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "My journey towards good sitting posture - steps I've taken so far"
 excerpt: "Sitting properly is difficult - I've been struggling with it for most of my life. This blog post describes steps I've taken so far to improve my sitting posture."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2022-10-31"
 slug: my-sitting-posture-journey
 cover_image:
-  src: "../../assets/covers/my-sitting-posture-journey-cover.jpg"
+  src: "/src/assets/blog/covers/my-sitting-posture-journey-cover.jpg"
   alt: ""
   credit_text: "Samantha Gades on Unsplash"
   credit_link: "https://unsplash.com/@srosinger3997?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

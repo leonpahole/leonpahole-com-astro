@@ -8,6 +8,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       fontFamily: {
         mono: ["Red Hat Mono Variable", ...defaultTheme.fontFamily.mono],
       },
@@ -87,6 +90,9 @@ module.exports = {
       },
       maxWidth: {
         screen: pxToRem(800),
+      },
+      aspectRatio: {
+        image: "2.4",
       },
       margin: {
         7.5: pxToRem(30),

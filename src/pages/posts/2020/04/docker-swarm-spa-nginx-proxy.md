@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Docker swarm single node deployment of a Node.js, Postgres and Angular 9 web app using Ansible and nginx-proxy with automated SSL certificates"
 excerpt: In this blog post I will present a DevOps workflow I use to deploy a microservice based web application on a single node. We will use an example of an Angular 9 app, Node.js REST API backend and a Postgres database. We will orchestrate this system with Docker swarm and deploy it using Ansible. This will allow us to deploy, update and rollback the system with a single command. We will also use nginx-proxy as an entry point to the application and letsencrypt-nginx-proxy-companion to automate SSL certificates.
 categories:
@@ -9,7 +10,7 @@ categories:
 date: "2020-04-21"
 slug: docker-swarm-spa-nginx-proxy
 cover_image:
-  src: "../../assets/covers/swarm-cover.jpg"
+  src: "/src/assets/blog/covers/swarm-cover.jpg"
   alt: "The Swarm"
   credit_text: "James Wainscoat on Unsplash"
   credit_link: "https://unsplash.com/@tumbao1949?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
@@ -217,7 +218,7 @@ Here is the project for reference: [DevOps project](https://github.com/leonpahol
 
 Let's talk for a bit about the architecture of our application. We will have 4 application containers; namely frontend, backend, database and database admin. From Docker's point of view, they will not be exposing any ports to the outside world. Instead, we will have another container, called a proxy, sitting in front of these containers, accepting every request and forwarding it to containers. This proxy will define all virtual hosts and ports to forward the requests to containers. In production, this proxy will also take care of SSL certificates.
 
-![App architecture](../../assets/covers/traefik-cover.png)
+![App architecture](/src/assets/blog/covers/traefik-cover.png)
 
 ### Local testing Swarm file
 

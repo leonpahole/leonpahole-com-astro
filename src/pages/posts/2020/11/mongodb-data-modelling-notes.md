@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "MongoDB: data modelling principles"
 excerpt: "Having completed the MongoDB University data modelling course, I decided to write down some important principles of data modelling in MongoDB that I learned."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-11-01"
 slug: mongodb-data-modelling-notes
 cover_image:
-  src: "../../assets/covers/data-cover.jpg"
+  src: "/src/assets/blog/covers/data-cover.jpg"
   alt: "Data"
   credit_text: "Mika Baumeister on Unsplash"
   credit_link: "https://unsplash.com/@mbaumi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

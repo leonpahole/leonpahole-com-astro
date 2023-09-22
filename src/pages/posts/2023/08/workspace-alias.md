@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Productivity bit: workspace alias"
 excerpt: "Over the years I've realized that small - perhaps even trivial - productivity improvements can really add up to produce an efficient work environment. I call these improvements productivity bits. In today's blog post, I am sharing the productivity bit that helps me kickstart my work on a certain workspace."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-08-05"
 slug: productivity-bit-workspace-alias
 cover_image:
-  src: "../../assets/covers/productivity-workspace-alias-cover.jpg"
+  src: "/src/assets/blog/covers/productivity-workspace-alias-cover.jpg"
   alt: ""
   credit_text: "Chiara F on Unsplash"
   credit_link: "https://unsplash.com/@quasichiara?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

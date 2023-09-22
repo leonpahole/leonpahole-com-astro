@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Traefik v2: connect a full-stack dockerized Node.js + Angular + PostgreSQL + Adminer application to Traefik"
 excerpt: "Following up from my previous blog post about the base setup of Traefik v2, I will now show how easy it is to connect a full stack dockerized application to it."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2020-05-02"
 slug: traefik-nodejs-api-and-db
 cover_image:
-  src: "../../assets/covers/traefik-cover.png"
+  src: "/src/assets/blog/covers/traefik-cover.png"
   alt: "Traefik"
   credit_text: "https://doc.traefik.io/traefik/"
   credit_link: "https://doc.traefik.io/traefik/"
@@ -29,7 +30,7 @@ For demo purposes, I will use my simple app repositories (although simple, they 
 
 Here is how the architecture looks like:
 
-![Form we'll build](../../assets/images/traefik-nodejs/app-architecture.png)
+![Architecture we'll build](/src/assets/blog/images/traefik-nodejs/app-architecture.png)
 
 We will use the following domains (`mydomain.com` is a placeholder for your actual domain):
 

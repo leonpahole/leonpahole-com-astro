@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "What ChatGPT taught us about learning and what I'm hoping we will learn from it about teaching"
 excerpt: "In this blog post I present my thoughts on how ChatGPT can revolutionalize the software development education system and how it is already changing the way we learn and think as developers."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-02-12"
 slug: chatgpt-learning-and-teaching
 cover_image:
-  src: "../../assets/covers/chatgpt-learning-and-teaching-cover.jpg"
+  src: "/src/assets/blog/covers/chatgpt-learning-and-teaching-cover.jpg"
   alt: ""
   credit_text: "Jonathan Kemper on Unsplash"
   credit_link: "https://unsplash.com/@jupp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Cultivating the adaptable mindset"
 excerpt: "The adaptable mindset is the idea that one should be confident in what they can learn. The idea applies to all walks of life, but for me, it was the most useful in my career as a web developer. In this blog post, I've detailed how having an adaptable mindset helps me deal with negative emotions, how I back it with action and, perhaps most importantly, why I find joy in it."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-08-13"
 slug: adaptable-mindset
 cover_image:
-  src: "../../assets/covers/adaptable-mindset-cover.jpg"
+  src: "/src/assets/blog/covers/adaptable-mindset-cover.jpg"
   alt: ""
   credit_text: "Sydney Rae on Unsplash"
   credit_link: "https://unsplash.com/@srz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

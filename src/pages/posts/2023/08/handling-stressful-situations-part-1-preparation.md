@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Handling stressful situations, part 1: The Preparation Routine"
 excerpt: "This blog post is part of a series on how I handle stressful and difficult situations to stay calm and collected, perform to the best of my abilities, and grow from the experience. In this post, I discuss my preparation routine, which takes place before a stressful event - whether it's minutes, hours, or days away."
 categories:
@@ -6,7 +7,7 @@ categories:
 date: "2023-08-19"
 slug: handling-stressful-situations-part-1-preparation
 cover_image:
-  src: "../../assets/covers/handling-stressful-situations-part-1-preparation-cover.jpg"
+  src: "/src/assets/blog/covers/handling-stressful-situations-part-1-preparation-cover.jpg"
   alt: ""
   credit_text: "Emma Simpson"
   credit_link: "https://unsplash.com/@esdesignisms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

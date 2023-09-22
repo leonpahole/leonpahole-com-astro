@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Keeping a positive outlook: turning bad into good"
 excerpt: "Life is full of ups and downs, and the older I get, the more complicated and overwhelming the world seems. It seems that the only option to not become overwhelmed is to keep a positive outlook no matter what. In this blog post, I describe my way of doing that: turning every negative into a positive."
 categories:
@@ -6,8 +7,8 @@ categories:
 date: "2021-12-04"
 slug: keeping-a-positive-outlook
 cover_image:
-  src: "../../assets/covers/positive-outlook-cover.jpg"
-  alt: "Be positive!"
+  src: "/src/assets/blog/covers/positive-outlook-cover.jpg"
+  alt: ""
   credit_text: "Amanda Jones on Unsplash"
   credit_link: "https://unsplash.com/@amandagraphc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---

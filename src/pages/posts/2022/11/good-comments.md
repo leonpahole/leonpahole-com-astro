@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "My take on comments in code"
 excerpt: "There's a lot of conflicting information about code comments in programming communities. Some people believe in writing comments as much as possible, while others advocate for code that is self-documenting and thus renders comments almost useless. In this blog post I lay out my past experiences with comments and how these experiences shaped my current approach to writing clear and understandable code."
 categories:
@@ -7,7 +8,7 @@ categories:
 date: "2022-11-20"
 slug: good-comments
 cover_image:
-  src: "../../assets/covers/good-comments-cover.jpg"
+  src: "/src/assets/blog/covers/good-comments-cover.jpg"
   alt: ""
   credit_text: "Luca Bravo on Unsplash"
   credit_link: "https://unsplash.com/es/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

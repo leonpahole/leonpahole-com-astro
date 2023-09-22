@@ -1,0 +1,40 @@
+.blog-content h2 {
+  @apply !mb-4 !mt-7.5 !text-h2 !text-primary;
+}
+
+.blog-content h3 {
+  @apply !mb-4 !mt-7.5 !text-h3 !text-primary;
+}
+
+.blog-content strong {
+  @apply !font-normal !text-primary;
+}
+
+.blog-content p {
+  @apply !mb-5;
+}
+
+.blog-content em {
+  @apply !font-light !italic;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply !mb-5 !ml-4;
+}
+
+.blog-content ul {
+  @apply !list-inside !list-disc;
+}
+
+.blog-content pre {
+  @apply !mb-5 !rounded-lg !p-2.5 !font-semibold;
+}
+
+.blog-content a {
+  @apply !underline;
+}
+
+.blog-content img {
+  @apply !h-auto !w-full;
+}

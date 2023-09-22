@@ -1,4 +1,5 @@
 ---
+layout: "../../../../layouts/BlogPostLayout.astro"
 title: "Making ReactJS forms simple with Formik's custom inputs and Typescript"
 excerpt: "In this blog post we'll build a form in ReactJS using Formik and demonstrate how simple forms can get with this amazing library. We'll also make sure that everything is type-safe using Typescript."
 categories:
@@ -6,8 +7,8 @@ categories:
 date: "2022-07-10"
 slug: making-reactjs-forms-simple-with-formik-custom-inputs
 cover_image:
-  src: "../../assets/covers/knowledge-cover.jpg"
-  alt: "Books"
+  src: "/src/assets/blog/covers/knowledge-cover.jpg"
+  alt: ""
   credit_text: "Kelly Sikkema on Unsplash"
   credit_link: "https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 ---
@@ -105,9 +106,9 @@ The form we will be building has some text inputs, a dropdown, and a custom-buil
 
 The form we will build is a simple sign-up form for developers.
 
-![Form we'll build](../../assets/images/formik-forms/resulting-form.png)
+![Form we'll build](/src/assets/blog/images/formik-forms/resulting-form.png)
 
-![Submitted form with errors](../../assets/images/formik-forms/resulting-form-errors.png)
+![Submitted form with errors](/src/assets/blog/images/formik-forms/resulting-form-errors.png)
 
 If you'd just like to see the end code, it's available on Github here: [https://github.com/leonpahole/formik-custom-fields-typescript-example](https://github.com/leonpahole/formik-custom-fields-typescript-example)
 
