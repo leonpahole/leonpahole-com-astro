@@ -3,7 +3,7 @@ import type { BlogPostFrontmatter } from "../../types/blog-post";
 import BlogPostList from "./BlogPostList.astro";
 
 const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
-  "../../pages/posts/**/*.md",
+  "../../pages/blog/post/**/*.md",
 );
 
 const AmountOfLatestBlogPosts = 3;
