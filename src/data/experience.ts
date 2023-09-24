@@ -279,6 +279,12 @@ const PublicSpeaking: Skill = {
   group: SkillType.SoftSkills,
 };
 
+const WorkingWithPeople: Skill = {
+  id: "working-with-people",
+  name: "Working with people",
+  group: SkillType.SoftSkills,
+};
+
 /* management */
 
 const ProjectManagement: Skill = {
@@ -335,6 +341,19 @@ export const experience: CompanyEntry[] = [
         ],
         from: "April 2023",
         to: "September 2023",
+      },
+      {
+        name: "POD lead",
+        skills: [WorkingWithPeople],
+        summary:
+          "Conducting 1:1 meetings with other frontend engineers in the office, talking about tech and non-tech topics, collecting and providing them feedback, making sure their requests and wishes are being heard, and improving their well-being in the company.",
+        bulletPoints: [
+          "Working with other departments to solve problems that my team members have.",
+          "Helped my team member push forward a technical issue on the project.",
+          "Conducting and organizing team meetings",
+        ],
+        from: "November 2022",
+        to: undefined,
       },
       {
         name: "Frontend developer",
