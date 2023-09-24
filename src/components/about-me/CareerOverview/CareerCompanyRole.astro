@@ -1,0 +1,65 @@
+---
+import type { CompanyRole } from "../../../data/experience";
+
+interface Props {
+  role: CompanyRole;
+}
+
+const { role } = Astro.props;
+
+const roleId =
+  role.name.toLowerCase().replace(/\s/g, "-") + role.from.replace(/\s/g, "-");
+---
+
+<li class="relative">
+  <div
+    class="absolute -left-[5rem] top-2 h-4 w-4 rounded-full border border-primary"
+  >
+  </div>
+
+  <article>
+    <div class="flex items-center justify-between gap-5">
+      <h4 class="text-h4 uppercase text-primary">{role.name}</h4>
+      <div class="flex-shrink-0">
+        <p class="text-link">
+          ({role.from} - {role.to ?? "Present"})
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-1.5 text-details">
+      {
+        role.skills.map((skill, i) => (
+          <>
+            <button class="flex-shrink-0" type="button" data-tech={skill.id}>
+              {skill.name}
+            </button>
+            {i < role.skills.length - 1 && <span>•</span>}
+          </>
+        ))
+      }
+    </div>
+
+    <p>{role.summary}</p>
+
+    <label for={`toggle-${roleId}`} class="border-b border-b-text">
+      View details
+    </label>
+
+    <input
+      type="checkbox"
+      id={`toggle-${roleId}`}
+      class="toggle-checkbox hidden"
+    />
+
+    <ul class="ml-4 mt-1 hidden list-inside list-disc">
+      {role.bulletPoints.map((bulletPoint) => <li>{bulletPoint}</li>)}
+    </ul>
+  </article>
+</li>
+
+<style>
+  .toggle-checkbox:checked + ul {
+    @apply !block;
+  }
+</style>

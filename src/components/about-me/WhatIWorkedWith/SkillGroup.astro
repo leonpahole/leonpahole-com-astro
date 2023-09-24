@@ -16,7 +16,7 @@ const { group } = Astro.props;
     {
       group.skills.map((skill) => (
         <li class="text-link">
-          <button type="button" data-tech={skill.id}>
+          <button type="button" data-tech={skill.id} class="text-start">
             {skill.name}
           </button>
         </li>

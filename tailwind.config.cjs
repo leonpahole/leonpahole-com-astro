@@ -45,6 +45,12 @@ module.exports = {
             fontWeight: 500,
           },
         ],
+        h4: [
+          pxToRem(20),
+          {
+            fontWeight: 400,
+          },
+        ],
         link: [
           pxToRem(16),
           {
@@ -108,6 +114,7 @@ module.exports = {
       },
       gap: {
         1.75: pxToRem(7),
+        12.5: pxToRem(50),
       },
       animation: {
         wiggle: "wiggle 3s linear infinite",

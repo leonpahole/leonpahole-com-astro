@@ -1,0 +1,24 @@
+---
+import type { CompanyEntry } from "../../../data/experience";
+import CareerCompanyRole from "./CareerCompanyRole.astro";
+
+interface Props {
+  company: CompanyEntry;
+}
+
+const { company } = Astro.props;
+---
+
+<li class="relative">
+  <div class="absolute -left-11 top-2.5 h-6 w-6 rounded-full bg-primary"></div>
+
+  <article>
+    <div class="mb-1.5 flex justify-between gap-5">
+      <h3 class="text-h3">{company.name}</h3>
+    </div>
+
+    <ol class="flex flex-col items-center gap-6 pl-10">
+      {company.roles.map((role) => <CareerCompanyRole role={role} />)}
+    </ol>
+  </article>
+</li>
