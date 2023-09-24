@@ -1,0 +1,32 @@
+---
+import { skillset } from "../../data/experience.ts";
+---
+
+<section class="sm:pb-4">
+  <h1 class="text-regular-big">
+    <span class="block">Leon Pahole</span>
+
+    <ul class="text-body">
+      <li>
+        Software engineer with management experience and strong soft skills.
+      </li>
+      <li>Age: 26</li>
+      <li>Location: Maribor, Slovenia</li>
+      <li>Education: Bachelor's degree in Computer Science</li>
+    </ul>
+  </h1>
+
+  <div class="my-2 h-px w-full bg-text opacity-20"></div>
+
+  <ul class="flex list-inside list-disc flex-wrap gap-3 py-3 text-body">
+    {
+      skillset.map((skill) => {
+        return (
+          <li>
+            <span>{skill}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

@@ -237,6 +237,18 @@ const Mentoring: Skill = {
   group: SkillType.SoftSkills,
 };
 
+const ProvidingFeedback: Skill = {
+  id: "providing-feedback",
+  name: "Providing feedback",
+  group: SkillType.SoftSkills,
+};
+
+const Lecturing: Skill = {
+  id: "lecturing",
+  name: "Lecturing",
+  group: SkillType.SoftSkills,
+};
+
 const ClientCommunication: Skill = {
   id: "client-communication",
   name: "Client communication",
@@ -297,27 +309,28 @@ export const experience: CompanyEntry[] = [
           WritingProposalDocuments,
         ],
         summary:
-          "I am helping improve cloud deployment processes, and architecting solutions for new projects.",
+          "Helping improve cloud deployment processes, estimating and architecting solutions for new projects, solving problems on projects to get them back on track, improving internal processes.",
         bulletPoints: [
-          "Helping improve cloud deployment processes.",
-          "Jumping into projects of various tech stacks that need assistance, and helping them get back on track.",
-          "Writing estimations and proposal documents for new projects.",
+          "I'm learning from senior architects on how to approach problems, and how to architect solutions.",
+          "Currently working on a frontend initiative that will help all frontend developers in the company work more effectively.",
+          "Delivered estimates and proposals for multiple projects, which helped the company gain new clients.",
+          "Helped solve problems on a project, which was in a bad state, and got it back on track.",
         ],
         from: "April 2023",
         to: "September 2023",
       },
       {
         name: "Frontend academy lead",
-        skills: [Mentoring, PublicSpeaking],
+        skills: [Mentoring, Lecturing, PublicSpeaking, ProvidingFeedback],
         summary:
-          "Designed a curriculum for a frontend academy, performed lectures, and mentored students on a comprehensive internship.",
+          "Designing a curriculum for a frontend academy, performing lectures, providing feedback, and mentoring students on a comprehensive internship, resulting in more positive exposure of the company, and new team members.",
         bulletPoints: [
-          "Communicated with the recruitment team to promote the academy, and to execute it in a quality way.",
-          "Promoted the academy in a public speaking event, which granted us more applicants.",
-          "Perofmed lectures, which focused not only on technical skills, but also on soft skills.",
+          "Communicated with the recruitment and marketing team to promote the academy.",
+          "Promoted the academy in two public speaking events, which granted us more applicants.",
+          "Worked with the recruitment team to assure the academy was a good experience for the students.",
+          "Performed lectures, which focused not only on technical skills, but also on soft skills.",
           "Reviewed homeworks, provided feedback for students on 1:1 meetings, and helped them improve.",
-          "Chose the best students for the internship.",
-          "Together with my team, we designed the internship to mimic a real-life project.",
+          "Together with my team, designed the internship to mimic a real-life project and provided students feedback during the project.",
           "Chose the best students to join the company.",
         ],
         from: "April 2023",
@@ -327,10 +340,11 @@ export const experience: CompanyEntry[] = [
         name: "Frontend developer",
         skills: [React, NextJS, Svelte, TypeScript, TeamLeadership],
         summary:
-          "Frontend wasn't my strong suit before joining Povio, but I was able to quickly learn and adapt to the new technologies, and deliver value to the team.",
+          "Writing clean, optimized frontend code in various technologies for multiple projects.",
         bulletPoints: [
-          "Worked on 5 projects in 3 different technologies.",
-          "Set up a project from scratch, and led a small frontend team.",
+          "Set up a React project from scratch, and led a small frontend team.",
+          "Communicated with the client directly, and helped them understand the technical side of the project.",
+          "Provided feedback to the client on how to improve the product.",
           "I learned Svelte in 3 hours, and was able to deliver the value to the client on day one.",
           "Currently working on an external project, where I communicate with the client directly. I save them time by using written communication, and by understanding the requirements without the need for a meeting.",
         ],
@@ -347,10 +361,10 @@ export const experience: CompanyEntry[] = [
         name: "[Confidential project] mobile app developer",
         skills: [ReactNative, FrontendArchitecture],
         summary:
-          "I took ownership of delivering a mobile app in React native for a large project.",
+          "Taking ownership of developing and delivering a mobile app in React native for a large project.",
         bulletPoints: [
-          "I set up the app from scratch, and am working alone on it, while communicating with over 7 other team members.",
-          "I have saved time of several team members by understanding the requirements without the need for a meeting.",
+          "Set up the app from scratch, and working alone on it, while communicating with over 7 other team members.",
+          "Saved time of several team members by understanding the requirements without the need for a meeting.",
           "Despite being fully remote, the team trusts me with the delivery, because I diligently and independently communicate in written text.",
           "The app is functional on both iOS and Android.",
           "My full-stack background allows me to brainstorm solutions with my team members on the backend.",
@@ -361,10 +375,10 @@ export const experience: CompanyEntry[] = [
         name: "Technical mentor, advisor, and architect",
         skills: [FrontendArchitecture, BackendArchitecture, Mentoring],
         summary:
-          "I provide guidance on finding solutions to technical and non-technical problems, and do hands-on assistance whenever needed.",
+          "Providing guidance on finding solutions to technical and non-technical problems, and doing hands-on assistance whenever needed.",
         bulletPoints: [
           "1:1 mentoring, pair programming and debugging, while passing on my knowledge.",
-          "Jumping into project code and helping solve the most urgent bugs and pressing issues to put the project back on track.",
+          "Jumped into code of multiple projects to help solve the most urgent bugs and pressing issues and put them back on track.",
           "Architecting solutions at the start of the project, which helps the team start the project.",
           "Providing feedback and improvements suggestions for team allocation and company structure, which optimizes efficiency and saves money.",
         ],
@@ -379,7 +393,7 @@ export const experience: CompanyEntry[] = [
           Angular,
         ],
         summary:
-          "I helped kickstart a microservice backend project for a large enterprise.",
+          "Helping architect a solution and kickstart a microservice backend project for a large enterprise.",
         bulletPoints: [
           "Architected the backend solution from scratch and wrote a detailed proposal doc, which helped the client gain trust in our company, and provided the team with a specification to lean on.",
           "Broke down tasks, which allowed the client full visibility into the project.",
@@ -400,12 +414,13 @@ export const experience: CompanyEntry[] = [
           ClientCommunication,
         ],
         summary:
-          "I stepped up during a time that my team needed it the most. This was without question the greatest learning experience of my life so far.",
+          "Taking the responsibility for 4 projects, communicating with the clients, delegating tasks, and architecting solutions.",
         bulletPoints: [
+          "Stepped up and took ownership of a project, which was in a bad state, and led it to a successful delivery.",
           "Initially I made a lot of mistakes, but with the help of my kind teammates, I reflected, learned and improved.",
-          "I eventually gained the trust of my team, and we started working together as a well-oiled machine.",
-          "I expanded to manage other projects, and eventually led 4 of them, with the largest one having 7 team members.",
-          "I also served as a tech lead for all of the projects, architecting solutions, helping my team members, and writing code.",
+          "Earned the trust of my team, and we started working together well.",
+          "Expanded to manage other projects, and eventually led 4 of them, with the largest one having 7 team members.",
+          "Served as a tech lead for all of the projects, architecting solutions, helping my team members, and writing code.",
           "Participated in meetings with clients, where I learned how to communicate with them, and how to manage their expectations.",
           "Learned about business side of engineering, and the cost vs. benefit of certain decisions.",
           "After nearly burning out, I decided to step down from the role, as the company was out of hard times, and I focused on my health, productivity and slowly transitioning back to a more technical role.",
@@ -425,9 +440,10 @@ export const experience: CompanyEntry[] = [
           ProductOwnership,
           Docker,
           Xamarin,
+          Estimations,
         ],
         summary:
-          "I took ownership of a logistics product, communicating with the end users, collecting their feedback, and launching the product into production. In the following years, I then launched 2 more products, participated in multiple product demos, and became a product owner.",
+          "Architecting and implemetning multiple logistics products, communicating with the end users, collecting their feedback, and launching the products to production. Advising the company on architecture and deployment.",
         bulletPoints: [
           "Architected solutions for all products, and wrote the code for them.",
           "Collected feedback from end users, and implemented it into the products.",
@@ -442,12 +458,11 @@ export const experience: CompanyEntry[] = [
         name: "Devops and cloud engineer",
         skills: [Docker, Ansible, Traefik, Terraform, AWS, Azure, Bash],
         summary:
-          "What initially started as research eventually turned into me optimizing and streamlining deployment processes of the entire company, saving all the developers countless hours on deployments. I also optimized cloud infrastructure to save money.",
+          "Optimizing and streamlining deployment processes of the entire company, saving all the developers countless hours on deployments. Simplifying cloud infrastructure to optimize costs.",
         bulletPoints: [
-          "Researched and implemented a new deployment process, which saved the team multiple hours on each deployment.",
+          "Researched and implemented a new deployment process, which saved the team time on each deployment.",
           "Researched and implemented a new cloud infrastructure, which saved the company money.",
-          "Came up with my own solutions for devops problems, which better suited the company's needs.",
-          "Deployed a live-video solution that hosted over 1000 concurrent users.",
+          "Came up with my own solutions for devops problems, which suited the company's needs.",
         ],
         from: "March 2018",
         to: "September 2021",
@@ -467,10 +482,10 @@ export const experience: CompanyEntry[] = [
           TechnicalInterviewing,
         ],
         summary:
-          "During the time I was employed full-time, I served as a full-stack web developer for multiple projects, which spanned various domains and technology stacks.",
+          "Writing full-stack code on multiple projects, which spanned various domains and technology stacks.",
         bulletPoints: [
-          "Architected solutions for all projects, and wrote the code for them.",
           "Onboarded on a complex project and eventually took ownership of it.",
+          "Architected backend and frontend solutions, and wrote the code for them.",
         ],
         from: "March 2018",
         to: "September 2021",
@@ -486,7 +501,7 @@ export const experience: CompanyEntry[] = [
         name: "ASP.NET developer",
         skills: [AspNetMvc4, CSharp, JavaScript, CSS, HTML],
         summary:
-          "Wrote a full-stack web application using ASP.NET, JS, CSS and HTML for tracking records, articles and books.",
+          "Developing a full-stack web application using ASP.NET, JS, CSS and HTML for tracking records, articles and books.",
         bulletPoints: [
           "I worked in a team of three.",
           "I took ownership of developing a full-stack web application, which allowed other team members to focus on their respective tasks.",
@@ -523,3 +538,19 @@ export const skillGroups: SkillGroup[] = experience
     return acc;
   }, [])
   .sort((a, b) => b.skills.length - a.skills.length);
+
+export const skillset = [
+  "Adaptability",
+  "Initiative",
+  "Business aspects of engineering",
+  "Leadership",
+  "Soft skills",
+  "Health",
+  "Productivity",
+  "Working with people",
+  "Feedback",
+  "Ownership",
+  "Mentoring",
+  "Public speaking",
+  "Written communication",
+];
