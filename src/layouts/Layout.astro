@@ -62,7 +62,7 @@ const TwitterUsername = "@LeonPahole";
       twitter={{
         creator: TwitterUsername,
         title: socialCard.title,
-        image: socialCard.image,
+        image: `${Astro.site}${socialCard.image ?? LeonPaholeImage.src}`,
         description: socialCard.description,
         card: "summary",
       }}
