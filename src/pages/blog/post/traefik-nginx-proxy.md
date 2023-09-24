@@ -13,7 +13,7 @@ cover_image:
   credit_link: "https://doc.traefik.io/traefik/"
 ---
 
-If you haven't set up Traefik yet, check my previous blog post about the [base setup of Traefik v2](/blog/traefik-basic-setup). This blog post assumes you have this setup ready:
+If you haven't set up Traefik yet, check my previous blog post about the [base setup of Traefik v2](/blog/post/traefik-basic-setup). This blog post assumes you have this setup ready:
 
 - HTTP to HTTPS redirect,
 - automated Let's encrypt certificates,
@@ -43,7 +43,7 @@ networks:
     external: true
 ```
 
-Note that we connect the proxy to external network, created by Traefik (we did that in the [previous blog post](/blog/traefik-basic-setup)). If you have multiple services in your docker compose file, you should only put containers, that need to be exposed through the proxy, in this network, and define another internal network for internal container communication.
+Note that we connect the proxy to external network, created by Traefik (we did that in the [previous blog post](/blog/post/traefik-basic-setup)). If you have multiple services in your docker compose file, you should only put containers, that need to be exposed through the proxy, in this network, and define another internal network for internal container communication.
 
 As a side node, you need to name each of your routers differently. Here I named the router, associated with this container, "nginx" (denoted by `traefik.http.routers.nginx`). If you have another container you wanted to connect (you probably do), you should name it something else to prevent conflicts with this container.
 
@@ -59,9 +59,9 @@ In a few moments, `proxy.mydomain.com` will be available. You can check logs of 
 
 Check out my other examples of Traefik usage, if you are interested:
 
-- [Full-stack Angular + Node.js + Postgres application example](blog/traefik-nodejs-api-and-db/) - connect a typical full-stack application to Traefik.
-- [Proxy to S3 bucket example](/blog/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
-- [IP whitelist example](/blog/traefik-ip-whitelist) - allow only certain IP addresses to access selected Docker containers.
+- [Full-stack Angular + Node.js + Postgres application example](blog/post/traefik-nodejs-api-and-db/) - connect a typical full-stack application to Traefik.
+- [Proxy to S3 bucket example](/blog/post/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
+- [IP whitelist example](/blog/post/traefik-ip-whitelist) - allow only certain IP addresses to access selected Docker containers.
 
 <p></p>
 

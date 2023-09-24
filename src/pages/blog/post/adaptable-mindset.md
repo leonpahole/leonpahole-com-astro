@@ -37,7 +37,7 @@ I've been there. I am not exactly sure where these emotions stem from, but I thi
 
 ## The adaptable mindset
 
-I've written in the past about how [I'm no longer afraid to not know things](/blog/i-am-not-afraid-to-not-know-things-anymore). This is the basis for the idea of the adaptable mindset: _I don't have to know everything, but I should be confident that I can learn anything._
+I've written in the past about how [I'm no longer afraid to not know things](/blog/post/i-am-not-afraid-to-not-know-things-anymore). This is the basis for the idea of the adaptable mindset: _I don't have to know everything, but I should be confident that I can learn anything._
 
 This is why I prefer to call myself a "web developer", rather than a "React developer". Despite the fact that React is what I know the best at this particular moment when it comes to the frontend technologies, I have no fear of learning a new technology if that will be required of me in the future. In fact, I am confident I can do it, and I've done it in the past - I've quickly adopted Svelte and Angular when it was required of me to do so.
 

@@ -1,44 +1,10 @@
-# Redirect /about to /about-me
-/about     /about-me    301
-
-# Redirect all 404s to the home page (/)
-/*        /    200
-
 # Redirect /blog/<slug> to /blog/post/<slug> for paths that don't begin with nothing, a number, or "category"
 /blog/categories/*  /blog/category/:splat   301
 /blog/:number/*     /blog/:number/:splat    200
 /blog/*             /blog/post/:splat       301
 
-# blogs
-# /blog/handling-stressful-situations-part-3-the-retrospective 
-# /blog/handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment
-# /blog/handling-stressful-situations-part-1-preparation
-# /blog/adaptable-mindset
-# /blog/productivity-bit-workspace-alias
-# /blog/how-i-handle-frontend-errors
-# /blog/frontend-server-communication-structure
-# /blog/chatgpt-learning-and-teaching
-# /blog/how-exercising-less-intensely-helped-me-become-healthier
-# /blog/2022-retrospective-2023-plans
-# /blog/ts-namespaces
-# /blog/good-comments
-# /blog/my-sitting-posture-journey
-# /blog/productive-window-management
-# /blog/managing-ts-enums
-# /blog/programmer-stereotype
-# /blog/simplicity
-# /blog/making-reactjs-forms-simple-with-formik-custom-inputs
-# /blog/keeping-a-positive-outlook
-# /blog/i-am-not-afraid-to-not-know-things-anymore
-# /blog/the-return
-# /blog/traefik-ip-whitelist
-# /blog/mongodb-aggregation-framework-notes
-# /blog/mongodb-data-modelling-notes
-# /blog/traefik-basic-setup
-# /blog/traefik-nginx-proxy
-# /blog/traefik-nodejs-api-and-db
-# /blog/traefik-s3-proxy
-# /blog/docker-swarm-spa-nginx-proxy
-# /blog/dockerizing-wordpress
-# /blog/javascript-object-destructuring-for-better-functions
-# /blog/hello-world
+# Redirect /about to /about-me
+/about     /about-me    301
+
+# Redirect all 404s to the home page (/)
+/*        /    200

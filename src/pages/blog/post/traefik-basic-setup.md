@@ -31,9 +31,9 @@ In this blog post I want to share my base Traefik configuration. This includes:
 
 After these steps, you will have the ecosystem, but no actual sites yet. Check the follow-ups to this blog post with common practical uses:
 
-- [Nginx proxy example](/blog/traefik-nginx-proxy) - connect a basic Nginx proxy to Traefik.
-- [Full-stack Angular + Node.js + Postgres application example](blog/traefik-nodejs-api-and-db/) - connect a typical full-stack application to Traefik.
-- [Proxy to S3 bucket example](/blog/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
+- [Nginx proxy example](/blog/post/traefik-nginx-proxy) - connect a basic Nginx proxy to Traefik.
+- [Full-stack Angular + Node.js + Postgres application example](blog/post/traefik-nodejs-api-and-db/) - connect a typical full-stack application to Traefik.
+- [Proxy to S3 bucket example](/blog/post/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
 
 <p></p>
 
@@ -280,10 +280,10 @@ Visit `monitor.mydomain.com`, enter your username and password and you should be
 
 Further examples are presented in separate blog posts. Here are the links to some common uses of Traefik:
 
-- [Nginx proxy example](/blog/traefik-nginx-proxy) - connect a basic Nginx proxy to Traefik.
-- [Full-stack Angular + Node.js + Postgres application example](/blog/traefik-nodejs-api-and-db) - connect a typical full-stack application to Traefik.
-- [Proxy to S3 bucket example](/blog/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
-- [IP whitelist example](/blog/traefik-ip-whitelist) - allow only certain IP addresses to access selected Docker containers.
+- [Nginx proxy example](/blog/post/traefik-nginx-proxy) - connect a basic Nginx proxy to Traefik.
+- [Full-stack Angular + Node.js + Postgres application example](/blog/post/traefik-nodejs-api-and-db) - connect a typical full-stack application to Traefik.
+- [Proxy to S3 bucket example](/blog/post/traefik-s3-proxy) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
+- [IP whitelist example](/blog/post/traefik-ip-whitelist) - allow only certain IP addresses to access selected Docker containers.
 
 <p></p>
 
