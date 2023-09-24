@@ -7,10 +7,13 @@ import type { BlogPostFrontmatter } from "../types/blog-post";
 import Layout from "./Layout.astro";
 import type { MarkdownLayoutProps } from "astro";
 import { Picture } from "astro-imagetools/components";
+import { importImage } from "astro-imagetools/api";
 
 type Props = MarkdownLayoutProps<BlogPostFrontmatter>;
 
 const { frontmatter } = Astro.props;
+
+const imageUrl = await importImage(frontmatter.cover_image.src);
 ---
 
 <Layout
@@ -19,7 +22,7 @@ const { frontmatter } = Astro.props;
   socialCard={{
     title: frontmatter.title,
     description: frontmatter.excerpt,
-    image: frontmatter.cover_image.src,
+    image: imageUrl,
     type: "article",
   }}
 >

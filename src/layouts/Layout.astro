@@ -53,7 +53,9 @@ const TwitterUsername = "@LeonPahole";
         basic: {
           title: socialCard.title,
           type: socialCard.type ?? "website",
-          image: socialCard.image ?? LeonPaholeImage.src,
+          image:
+            "https://www.leonpahole.com" +
+            (socialCard.image ?? LeonPaholeImage.src),
         },
         optional: {
           description: socialCard.description,
