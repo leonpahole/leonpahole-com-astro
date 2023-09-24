@@ -1,12 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import LeonPaholeImage from "../../assets/images/LeonPahole.png";
+import { Picture } from "astro-imagetools/components";
 ---
 
-<Image
-  src={LeonPaholeImage}
-  alt="A headshot of Leon Pahole"
-  width="200"
-  height="200"
-  class="flex-shrink-0 rounded-full"
-/>
+<div class="relative h-52 w-52 flex-shrink-0 overflow-hidden rounded-full">
+  <Picture
+    src={"/src/assets/images/LeonPahole.png"}
+    alt="A headshot of Leon Pahole"
+    sizes="13rem"
+    layout="fill"
+  />
+</div>

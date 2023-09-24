@@ -13,12 +13,14 @@ const roleId =
 
 <li class="relative">
   <div
-    class="absolute -left-[5rem] top-2 h-4 w-4 rounded-full border border-primary"
+    class="absolute -left-10 top-2 h-4 w-4 rounded-full border border-primary sm:-left-14"
   >
   </div>
 
   <article>
-    <div class="flex items-center justify-between gap-5">
+    <div
+      class="flex flex-col justify-between sm:flex-row sm:items-center sm:gap-4"
+    >
       <h4 class="text-h4 uppercase text-primary">{role.name}</h4>
       <div class="flex-shrink-0">
         <p class="text-link">
@@ -27,18 +29,16 @@ const roleId =
       </div>
     </div>
 
-    <div class="flex flex-wrap items-center gap-1.5 text-details">
+    <ul class="mb-2 flex flex-wrap items-center gap-x-1.5 text-details">
       {
         role.skills.map((skill, i) => (
           <>
-            <button class="flex-shrink-0" type="button" data-tech={skill.id}>
-              {skill.name}
-            </button>
+            <li class="flex-shrink-0">{skill.name}</li>
             {i < role.skills.length - 1 && <span>•</span>}
           </>
         ))
       }
-    </div>
+    </ul>
 
     <p>{role.summary}</p>
 

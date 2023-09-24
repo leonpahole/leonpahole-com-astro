@@ -27,6 +27,10 @@
   @apply !list-inside !list-disc;
 }
 
+.blog-content ol {
+  @apply !list-inside !list-decimal;
+}
+
 .blog-content pre {
   @apply !mb-5 !rounded-lg !p-2.5 !font-semibold;
 }
@@ -37,4 +41,12 @@
 
 .blog-content img {
   @apply !h-auto !w-full;
+}
+
+.blog-content {
+  @apply break-words;
+}
+
+.blog-content li > p {
+  @apply inline;
 }

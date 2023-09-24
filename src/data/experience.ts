@@ -316,8 +316,8 @@ export const experience: CompanyEntry[] = [
           "Delivered estimates and proposals for multiple projects, which helped the company gain new clients.",
           "Helped solve problems on a project, which was in a bad state, and got it back on track.",
         ],
-        from: "April 2023",
-        to: "September 2023",
+        from: "May 2023",
+        to: undefined,
       },
       {
         name: "Frontend academy lead",
