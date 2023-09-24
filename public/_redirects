@@ -1,7 +1,4 @@
-# Redirect /blog/<slug> to /blog/post/<slug> for paths that don't begin with nothing, a number, or "category"
 /blog/categories/*  /blog/category/:splat   301
-/blog/:number/*     /blog/:number/:splat    200
-/blog/*\b(?!post)(?!\/$)/* /blog/post/:splat  301
 
 # Redirects from old page
 /2020/02/hello_world.html /blog/post/hello-world 301
@@ -18,6 +15,40 @@
 /2021/11/the_return.html /blog/post/the-return 301
 /2021/11/i_am_not_afraid_to_not_know_things_anymore.html /blog/post/i-am-not-afraid-to-not-know-things-anymore 301
 /2021/12/keeping-a-positive-outlook.html /blog/post/keeping-a-positive-outlook 301
+
+# blogs
+/blog/handling-stressful-situations-part-3-the-retrospective /blog/post/handling-stressful-situations-part-3-the-retrospective 301
+/blog/handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment /blog/post/handling-stressful-situations-part-2-maintaining-composure-and-performing-in-the-moment 301
+/blog/handling-stressful-situations-part-1-preparation /blog/post/handling-stressful-situations-part-1-preparation 301
+/blog/adaptable-mindset /blog/post/adaptable-mindset 301
+/blog/productivity-bit-workspace-alias /blog/post/productivity-bit-workspace-alias 301
+/blog/how-i-handle-frontend-errors /blog/post/how-i-handle-frontend-errors 301
+/blog/frontend-server-communication-structure /blog/post/frontend-server-communication-structure 301
+/blog/chatgpt-learning-and-teaching /blog/post/chatgpt-learning-and-teaching 301
+/blog/how-exercising-less-intensely-helped-me-become-healthier /blog/post/how-exercising-less-intensely-helped-me-become-healthier 301
+/blog/2022-retrospective-2023-plans /blog/post/2022-retrospective-2023-plans 301
+/blog/ts-namespaces /blog/post/ts-namespaces 301
+/blog/good-comments /blog/post/good-comments 301
+/blog/my-sitting-posture-journey /blog/post/my-sitting-posture-journey 301
+/blog/productive-window-management /blog/post/productive-window-management 301
+/blog/managing-ts-enums /blog/post/managing-ts-enums 301
+/blog/programmer-stereotype /blog/post/programmer-stereotype 301
+/blog/simplicity /blog/post/simplicity 301
+/blog/making-reactjs-forms-simple-with-formik-custom-inputs /blog/post/making-reactjs-forms-simple-with-formik-custom-inputs 301
+/blog/keeping-a-positive-outlook /blog/post/keeping-a-positive-outlook 301 
+/blog/i-am-not-afraid-to-not-know-things-anymore /blog/post/i-am-not-afraid-to-not-know-things-anymore 301
+/blog/the-return /blog/post/the-return 301
+/blog/traefik-ip-whitelist /blog/post/traefik-ip-whitelist 301
+/blog/mongodb-aggregation-framework-notes /blog/post/mongodb-aggregation-framework-notes 301
+/blog/mongodb-data-modelling-notes /blog/post/mongodb-data-modelling-notes 301
+/blog/traefik-basic-setup /blog/post/traefik-basic-setup 301
+/blog/traefik-nginx-proxy /blog/post/traefik-nginx-proxy 301
+/blog/traefik-nodejs-api-and-db /blog/post/traefik-nodejs-api-and-db 301
+/blog/traefik-s3-proxy /blog/post/traefik-s3-proxy 301
+/blog/docker-swarm-spa-nginx-proxy /blog/post/docker-swarm-spa-nginx-proxy 301
+/blog/dockerizing-wordpress /blog/post/dockerizing-wordpress 301
+/blog/javascript-object-destructuring-for-better-functions /blog/post/javascript-object-destructuring-for-better-functions 301
+/blog/hello-world /blog/post/hello-world 301
 
 # Redirect /about to /about-me
 /about     /about-me    301
