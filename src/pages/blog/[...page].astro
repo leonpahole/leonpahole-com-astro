@@ -40,6 +40,6 @@ const { page } = Astro.props;
   <BlogPostListPagination
     currentPage={page.currentPage}
     totalPages={page.lastPage}
-    getPageUrl={(page) => `/blog/${page}`}
+    getPageUrl={(page) => `/blog/${page > 1 ? page : ""}`}
   />
 </Layout>

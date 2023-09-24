@@ -1,7 +1,7 @@
 # Redirect /blog/<slug> to /blog/post/<slug> for paths that don't begin with nothing, a number, or "category"
 /blog/categories/*  /blog/category/:splat   301
 /blog/:number/*     /blog/:number/:splat    200
-/blog/*             /blog/post/:splat       301
+/blog/*\b(?!post)/* /blog/post/:splat       301
 
 # Redirect /about to /about-me
 /about     /about-me    301
