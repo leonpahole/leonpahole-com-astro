@@ -26,7 +26,7 @@ export const getCategorySlug = (category: string) => {
 };
 
 export const getCategoryUrl = (category: string) => {
-  return `/blog/category/${getCategorySlug(category)}`;
+  return `/blog/categories/${getCategorySlug(category)}`;
 };
 
 export const getCategoryNameFromSlug = (slug: string) => {
