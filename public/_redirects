@@ -3,6 +3,22 @@
 /blog/:number/*     /blog/:number/:splat    200
 /blog/*\b(?!post)/* /blog/post/:splat       301
 
+# Redirects from old page
+/2020/02/hello_world.html /blog/hello-world 301
+/2020/03/javascript_object_destructuring_for_better_functions.html /blog/javascript-object-destructuring-for-better-functions 301
+/2020/04/dockerizing_wordpress.html /blog/dockerizing-wordpress 301
+/2020/04/docker_swarm_spa_nginx_proxy.html /blog/docker-swarm-spa-nginx-proxy 301
+/2020/05/traefik-basic-setup.html /blog/traefik-basic-setup 301
+/2020/05/traefik-nodejs-api-and-db.html /blog/traefik-nodejs-api-and-db 301
+/2020/05/traefik-nginx-proxy.html /blog/traefik-nginx-proxy 301
+/2020/05/traefik-s3-proxy.html /blog/traefik-s3-proxy 301
+/2020/11/mongodb-data-modelling-notes.html /blog/mongodb-data-modelling-notes 301
+/2020/11/mongodb-aggregation-framework-notes.html /blog/mongodb-aggregation-framework-notes 301
+/2020/11/traefik-ip-whitelist.html /blog/traefik-ip-whitelist 301
+/2021/11/the_return.html /blog/the-return 301
+/2021/11/i_am_not_afraid_to_not_know_things_anymore.html /blog/i-am-not-afraid-to-not-know-things-anymore 301
+/2021/12/keeping-a-positive-outlook.html /blog/keeping-a-positive-outlook 301
+
 # Redirect /about to /about-me
 /about     /about-me    301
 
