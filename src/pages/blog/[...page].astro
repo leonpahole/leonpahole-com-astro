@@ -7,7 +7,7 @@ import type { GetStaticPaths } from "astro";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
-    "../../pages/blog/post/**/*.md",
+    "../../posts/**/*.md",
   );
 
   allBlogPosts.sort((a, b) => {
