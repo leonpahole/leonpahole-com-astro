@@ -6,7 +6,11 @@ import CareerCompany from "./CareerCompany.astro";
 <section class="mt-1 pt-4">
   <h2 class="mb-2.5 text-h2 uppercase text-primary">Career overview</h2>
 
-  <ol class="flex flex-col gap-12.5 border-l border-primary pl-6">
-    {experience.map((company) => <CareerCompany company={company} />)}
+  <ol class="gap-12.5 border-l border-primary pl-6 print:border-l-0 print:pl-0">
+    {
+      experience.map((company, i) => (
+        <CareerCompany company={company} isLast={i === experience.length - 1} />
+      ))
+    }
   </ol>
 </section>

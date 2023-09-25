@@ -4,20 +4,24 @@ import CareerCompanyRole from "./CareerCompanyRole.astro";
 
 interface Props {
   company: CompanyEntry;
+  isLast: boolean;
 }
 
-const { company } = Astro.props;
+const { company, isLast } = Astro.props;
 ---
 
-<li class="relative">
-  <div class="absolute -left-9 top-2.5 h-6 w-6 rounded-full bg-primary"></div>
+<li class={`relative ${isLast ? "" : "print:mb-6 mb-12.5"}`}>
+  <div
+    class="absolute -left-9 top-2.5 h-6 w-6 rounded-full bg-primary print:hidden"
+  >
+  </div>
 
   <article>
     <div class="mb-1.5 flex justify-between gap-5">
       <h3 class="text-h3">{company.name}</h3>
     </div>
 
-    <ol class="flex flex-col items-center gap-6 pl-2 sm:pl-6">
+    <ol class="flex flex-col items-center gap-6 pl-0 print:!pl-[0rem] sm:pl-6">
       {company.roles.map((role) => <CareerCompanyRole role={role} />)}
     </ol>
   </article>

@@ -1,10 +1,26 @@
 ---
 import { skillset } from "../../data/experience.ts";
+import { email, linkedin, github } from "../../data/socials.ts";
+import PrintIcon from "../../assets/icons/PrintIcon.astro";
+import EmailIcon from "../../assets/icons/social/EmailIcon.astro";
+import LinkedinIcon from "../../assets/icons/social/LinkedinIcon.astro";
+import GithubIcon from "../../assets/icons/social/GithubIcon.astro";
+import WebIcon from "../../assets/icons/social/WebIcon.astro";
+
+const socialListItemClasses =
+  "flex items-center mr-3 last:m-0 not-italic flex-shrink-0";
+const socialIconClasses = "h-6 w-6 mr-1";
 ---
 
-<section class="sm:pb-4">
-  <h1 class="text-regular-big">
-    <span class="block">Leon Pahole</span>
+<section class="pb-4">
+  <div class="text-regular-big">
+    <div class="flex items-center justify-between">
+      <h1 class="print:text-h1 print:text-primary">Leon Pahole</h1>
+      <button class="print:hidden" type="button" onclick="print()">
+        <span class="visually-hidden">Print this page</span>
+        <PrintIcon class="h-6 w-6" />
+      </button>
+    </div>
 
     <ul class="text-body">
       <li>
@@ -14,11 +30,33 @@ import { skillset } from "../../data/experience.ts";
       <li>Location: Maribor, Slovenia</li>
       <li>Education: Bachelor's degree in Computer Science</li>
     </ul>
-  </h1>
 
-  <div class="my-2 h-px w-full bg-text opacity-20"></div>
+    <address class="mt-2 text-body">
+      <div class={socialListItemClasses + " mb-2"}>
+        <WebIcon class={socialIconClasses} />
+        <a href={Astro.site}>{Astro.site?.host}</a>
+      </div>
 
-  <ul class="flex list-inside list-disc flex-wrap gap-3 py-3 text-body">
+      <ul class="flex flex-wrap items-center gap-y-2">
+        <li class={socialListItemClasses}>
+          <EmailIcon class={socialIconClasses} />
+          <a href={email.url}>{email.name}</a>
+        </li>
+        <li class={socialListItemClasses}>
+          <LinkedinIcon class={socialIconClasses} />
+          <a href={linkedin.url}>{linkedin.name}</a>
+        </li>
+        <li class={socialListItemClasses}>
+          <GithubIcon class={socialIconClasses} />
+          <a href={github.url}>{github.name}</a>
+        </li>
+      </ul>
+    </address>
+  </div>
+
+  <hr class="my-3 h-px w-full bg-text opacity-20 print:opacity-100" />
+
+  <ul class="flex list-inside list-disc flex-wrap gap-x-3 gap-y-2 text-body">
     {
       skillset.map((skill) => {
         return (

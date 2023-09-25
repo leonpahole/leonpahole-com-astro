@@ -11,9 +11,9 @@ const roleId =
   role.name.toLowerCase().replace(/\s/g, "-") + role.from.replace(/\s/g, "-");
 ---
 
-<li class="relative">
+<li class="relative print:break-inside-avoid">
   <div
-    class="absolute -left-10 top-2 h-4 w-4 rounded-full border border-primary sm:-left-14"
+    class="absolute -left-8 top-2 h-4 w-4 rounded-full border border-primary print:hidden sm:-left-14"
   >
   </div>
 
@@ -44,7 +44,7 @@ const roleId =
 
     <label
       for={`toggle-${roleId}`}
-      class="cursor-pointer border-b border-b-text"
+      class="cursor-pointer border-b border-b-text print:hidden"
     >
       View details
     </label>
@@ -55,14 +55,16 @@ const roleId =
       class="toggle-checkbox hidden"
     />
 
-    <ul class="ml-4 mt-1 hidden list-inside list-disc">
+    <ul class="ml-4 mt-1 hidden list-inside list-disc print:hidden">
       {role.bulletPoints.map((bulletPoint) => <li>{bulletPoint}</li>)}
     </ul>
   </article>
 </li>
 
 <style>
-  .toggle-checkbox:checked + ul {
-    @apply !block;
+  @media not print {
+    .toggle-checkbox:checked + ul {
+      @apply !block;
+    }
   }
 </style>

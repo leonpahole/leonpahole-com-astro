@@ -306,7 +306,7 @@ export const experience: CompanyEntry[] = [
     to: undefined,
     roles: [
       {
-        name: "Junior devops engineer and architect",
+        name: "Devops engineer and architect",
         skills: [
           BackendArchitecture,
           FrontendArchitecture,
@@ -362,6 +362,7 @@ export const experience: CompanyEntry[] = [
           "Writing clean, optimized frontend code in various technologies for multiple projects.",
         bulletPoints: [
           "Set up a React project from scratch, and led a small frontend team.",
+          "Spent a lot of time learning how to optimize React code, and how to optimize Lighthouse score in Next.js.",
           "Communicated with the client directly, and helped them understand the technical side of the project.",
           "Provided feedback to the client on how to improve the product.",
           "I learned Svelte in 3 hours, and was able to deliver the value to the client on day one.",

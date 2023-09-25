@@ -1,4 +1,6 @@
 ---
+import { github, linkedin, email, twitter } from "../../../data/socials";
+
 import EmailIcon from "../../../assets/icons/social/EmailIcon.astro";
 import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
 import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
@@ -15,7 +17,7 @@ const iconClass =
   class="flex w-full items-center justify-center gap-2.5 pt-7.5 sm:justify-start"
 >
   <SocialLinkContainer
-    url="https://github.com/leonpahole"
+    url={github.url}
     alt="Github (opens in new tab)"
     class="social-link"
   >
@@ -23,7 +25,7 @@ const iconClass =
   </SocialLinkContainer>
 
   <SocialLinkContainer
-    url="https://www.linkedin.com/in/leon-pahole-089ab1248/"
+    url={linkedin.url}
     alt="LinkedIn (opens in new tab)"
     class="social-link"
   >
@@ -31,18 +33,14 @@ const iconClass =
   </SocialLinkContainer>
 
   <SocialLinkContainer
-    url="https://twitter.com/leonpahole"
+    url={twitter.url}
     alt="Twitter (opens in new tab)"
     class="social-link"
   >
     <TwitterIcon class={iconClass} />
   </SocialLinkContainer>
 
-  <SocialLinkContainer
-    url="mailto:leon.pahole@gmail.com"
-    alt="Email"
-    class="social-link"
-  >
+  <SocialLinkContainer url={email.url} alt="Email" class="social-link">
     <EmailIcon class={iconClass} />
   </SocialLinkContainer>
 </address>
