@@ -1,0 +1,70 @@
+---
+import { SEO } from "astro-seo";
+import { PersonalPhotoPath, getImageSrcForSocialPreview } from "../utils/image";
+import { PersonalTitle, PersonalDescription } from "../data/presentation";
+import { twitter } from "../data/socials";
+
+export interface HTMLHeadProps {
+  title?: string;
+  description?: string;
+  socialCard?: {
+    type?: "website" | "article";
+    image?: string;
+    twitterType?: "summary" | "summary_large_image";
+  };
+}
+
+type Props = HTMLHeadProps;
+
+const {
+  title: titleProp,
+  description: descriptionProp,
+  socialCard: socialCardProp,
+} = Astro.props;
+
+const title = `${titleProp ? `${titleProp} | ` : ""}${PersonalTitle}`;
+const description = descriptionProp ?? PersonalDescription;
+
+const socialCard = {
+  title,
+  description,
+  type: socialCardProp?.type ?? "website",
+  image: new URL(
+    await getImageSrcForSocialPreview(
+      socialCardProp?.image ?? PersonalPhotoPath,
+    ),
+    Astro.site,
+  ).href,
+  twitterCard: socialCardProp?.twitterType ?? "summary",
+};
+---
+
+<head>
+  <SEO
+    title={title}
+    description={description}
+    openGraph={{
+      basic: {
+        title: socialCard.title,
+        type: socialCard.type ?? "website",
+        image: socialCard.image,
+      },
+      optional: {
+        description: socialCard.description,
+      },
+    }}
+    twitter={{
+      creator: twitter.name,
+      title: socialCard.title,
+      image: socialCard.image,
+      description: socialCard.description,
+      card: socialCard.twitterCard,
+    }}
+  />
+
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+</head>
