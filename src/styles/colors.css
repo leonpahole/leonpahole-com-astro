@@ -1,10 +1,22 @@
 /* light theme */
 
 :root {
-  --color-primary: #2400ff;
-  --color-text: #1a1a1a;
-  --color-text-inverted: #f5f5f5;
-  --color-background: #f5f5f5;
+  --light-color-primary: #2400ff;
+  --light-color-text: #1a1a1a;
+  --light-color-text-inverted: #f5f5f5;
+  --light-color-background: #f5f5f5;
+
+  --dark-color-primary: #ffffa3;
+  --dark-color-text: #f5f5f5;
+  --dark-color-text-inverted: #1a1a1a;
+  --dark-color-background: #363636;
+}
+
+:root {
+  --color-primary: var(--light-color-primary);
+  --color-text: var(--light-color-text);
+  --color-text-inverted: var(--light-color-text-inverted);
+  --color-background: var(--light-color-background);
 
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
@@ -29,10 +41,10 @@
 
 /* dark theme */
 :root[class~="dark"] {
-  --color-primary: #ffffa3;
-  --color-text: #f5f5f5;
-  --color-text-inverted: #1a1a1a;
-  --color-background: #363636;
+  --color-primary: var(--dark-color-primary);
+  --color-text: var(--dark-color-text);
+  --color-text-inverted: var(--dark-color-text-inverted);
+  --color-background: var(--dark-color-background);
 
   --prism-scheme: dark;
   --prism-foreground: #d4cfbf;
@@ -60,24 +72,12 @@
   --prism-selection-background: #444444;
 }
 
-/* print theme - always light */
+/* print theme - always light, even in dark mode */
 @media print {
   :root[class~="dark"] {
-    --color-primary: #2400ff;
-    --color-text: #1a1a1a;
-    --color-text-inverted: #f5f5f5;
-    --color-background: #f5f5f5;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .shiki.dark-plus {
-    display: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .shiki.light-plus {
-    display: none;
+    --color-primary: var(--light-color-primary);
+    --color-text: var(--light-color-text);
+    --color-text-inverted: var(--light-color-text-inverted);
+    --color-background: var(--light-color-background);
   }
 }
