@@ -4,6 +4,7 @@ import { SEO } from "astro-seo";
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/footer/Footer.astro";
 import LeonPaholeImage from "../assets/images/LeonPahole.png";
+import { importImage } from "astro-imagetools/api";
 
 import "@fontsource-variable/red-hat-mono";
 
@@ -36,11 +37,16 @@ const title =
 const socialCard = {
   title: socialCardProp?.title ?? title,
   type: socialCardProp?.type ?? "website",
-  image: socialCardProp?.image ?? LeonPaholeImage.src,
+  image:
+    socialCardProp?.image ??
+    (await importImage("/src/assets/images/LeonPahole.png?width=800")),
   description: socialCardProp?.description ?? description,
 };
 
 const TwitterUsername = "@LeonPahole";
+
+const socialImage = new URL(socialCard.image ?? LeonPaholeImage.src, Astro.site)
+  .href;
 ---
 
 <!doctype html>
@@ -53,7 +59,7 @@ const TwitterUsername = "@LeonPahole";
         basic: {
           title: socialCard.title,
           type: socialCard.type ?? "website",
-          image: `${Astro.site}${socialCard.image ?? LeonPaholeImage.src}`,
+          image: socialImage,
         },
         optional: {
           description: socialCard.description,
@@ -62,9 +68,9 @@ const TwitterUsername = "@LeonPahole";
       twitter={{
         creator: TwitterUsername,
         title: socialCard.title,
-        image: `${Astro.site}${socialCard.image ?? LeonPaholeImage.src}`,
+        image: socialImage,
         description: socialCard.description,
-        card: "summary",
+        card: "summary_large_image",
       }}
     />
 

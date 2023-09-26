@@ -13,7 +13,7 @@ type Props = MarkdownLayoutProps<BlogPostFrontmatter>;
 
 const { frontmatter } = Astro.props;
 
-const imageUrl = await importImage(frontmatter.cover_image.src);
+const imageUrl = await importImage(frontmatter.cover_image.src + "?width=800");
 ---
 
 <Layout
