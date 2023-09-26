@@ -9,7 +9,7 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<div class="flex flex-wrap items-center gap-1.75">
+<div class="mt-2 flex flex-wrap items-center gap-1.75">
   <time class="flex-shrink-0 text-details" datetime="{post.frontmatter.date}">
     {post.date}
   </time>

@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lighthouse": "unlighthouse --site localhost:4321",
+    "lighthouse-prd": "unlighthouse --site www.leonpahole.com"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",
