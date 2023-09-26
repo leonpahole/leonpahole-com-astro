@@ -1,8 +1,11 @@
 ---
 import { SEO } from "astro-seo";
-import { PersonalPhotoPath, getImageSrcForSocialPreview } from "../utils/image";
-import { PersonalTitle, PersonalDescription } from "../data/presentation";
-import { twitter } from "../data/socials";
+import {
+  PersonalPhotoPath,
+  getImageSrcForSocialPreview,
+} from "../../utils/image";
+import { PersonalTitle, PersonalDescription } from "../../data/presentation";
+import { twitter } from "../../data/socials";
 
 export interface HTMLHeadProps {
   title?: string;

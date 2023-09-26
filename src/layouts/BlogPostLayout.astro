@@ -17,8 +17,6 @@ const { frontmatter } = Astro.props;
   title={frontmatter.title}
   description={frontmatter.excerpt}
   socialCard={{
-    title: frontmatter.title,
-    description: frontmatter.excerpt,
     image: frontmatter.cover_image.src,
     type: "article",
     twitterType: "summary_large_image",
