@@ -21,6 +21,7 @@ interface Skill {
 
 export interface CompanyEntry {
   name: string;
+  url: string;
   from: string;
   to?: string;
   roles: CompanyRole[];
@@ -308,6 +309,7 @@ const TeamLeadership: Skill = {
 export const experience: CompanyEntry[] = [
   {
     name: "Povio inc.",
+    url: "https://povio.com/",
     from: "October 2021",
     to: undefined,
     roles: [
@@ -381,6 +383,7 @@ export const experience: CompanyEntry[] = [
   },
   {
     name: "U-centrix",
+    url: "https://u-centrix.com/en/",
     from: "October 2017",
     to: undefined,
     roles: [
@@ -521,6 +524,7 @@ export const experience: CompanyEntry[] = [
   },
   {
     name: "FERI Maribor",
+    url: "https://feri.um.si/",
     from: "June 2017",
     to: "October 2017",
     roles: [
