@@ -39,7 +39,9 @@ const socialCard = {
   type: socialCardProp?.type ?? "website",
   image:
     socialCardProp?.image ??
-    (await importImage("/src/assets/images/LeonPahole.png?width=800")),
+    (await importImage(
+      "/src/assets/images/LeonPahole.png?width=800&q=60&format=jpg",
+    )),
   description: socialCardProp?.description ?? description,
 };
 
