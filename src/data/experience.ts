@@ -125,6 +125,12 @@ const SpringBoot: Skill = {
   group: SkillType.Backend,
 };
 
+const Strapi: Skill = {
+  id: "strapi",
+  name: "Strapi",
+  group: SkillType.Backend,
+};
+
 /* frontend frameworks */
 
 const React: Skill = {
@@ -313,6 +319,7 @@ export const experience: CompanyEntry[] = [
           AWS,
           Estimations,
           WritingProposalDocuments,
+          Strapi,
         ],
         summary:
           "Helping improve cloud deployment processes, estimating and architecting solutions for new projects, solving problems on projects to get them back on track, improving internal processes.",
