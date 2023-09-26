@@ -37,7 +37,7 @@ const socialIconClasses = "h-6 w-6 mr-1";
         <a href={Astro.site}>{Astro.site?.host}</a>
       </div>
 
-      <ul class="flex flex-wrap items-center gap-y-2">
+      <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row sm:items-center">
         <li class={socialListItemClasses}>
           <EmailIcon class={socialIconClasses} />
           <a href={email.url}>{email.name}</a>
