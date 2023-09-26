@@ -18,6 +18,7 @@ interface Props {
     type?: "website" | "article";
     image?: string;
     description?: string;
+    twitterType?: "summary" | "summary_large_image";
   };
 }
 
@@ -43,6 +44,7 @@ const socialCard = {
       "/src/assets/images/LeonPahole.png?width=800&q=60&format=jpg",
     )),
   description: socialCardProp?.description ?? description,
+  twitterCard: socialCardProp?.twitterType ?? "summary",
 };
 
 const TwitterUsername = "@LeonPahole";
@@ -72,7 +74,7 @@ const socialImage = new URL(socialCard.image ?? LeonPaholeImage.src, Astro.site)
         title: socialCard.title,
         image: socialImage,
         description: socialCard.description,
-        card: "summary_large_image",
+        card: socialCard.twitterCard,
       }}
     />
 
