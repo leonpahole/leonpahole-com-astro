@@ -8,6 +8,7 @@ import BlogPostList from "../../../../components/blog/BlogPostList.astro";
 import BlogPostListPagination from "../../../../components/blog/BlogPostListPagination.astro";
 import Layout from "../../../../layouts/Layout.astro";
 import type { GetStaticPaths } from "astro";
+import { BlogDescription } from "../../../../data/presentation";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
@@ -49,18 +50,12 @@ const { page } = Astro.props;
 const { category } = Astro.params;
 
 const categoryName = getCategoryNameFromSlug(category!);
+const pageName = page.currentPage > 1 ? ` - page ${page.currentPage}` : "";
 ---
 
 <Layout
-  title={`Blogs with category ${categoryName}${
-    page.currentPage > 1 ? ` - page ${page.currentPage}` : ""
-  }`}
-  description="I'm Leon. I'm a software engineer. I write about web development, soft skills and my experience in the industry."
-  socialCard={{
-    title: `Blogs with category ${categoryName} | Leon Pahole - Software Engineer`,
-    description:
-      "I'm Leon. I'm a software engineer. I write about web development, soft skills and my experience in the industry.",
-  }}
+  title={`Blogs with category ${categoryName}${pageName}`}
+  description={BlogDescription}
 >
   <h2 class="text-h2 uppercase text-primary">
     <a href="/blog">

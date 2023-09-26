@@ -3,21 +3,21 @@ import { SEO } from "astro-seo";
 
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/footer/Footer.astro";
-import LeonPaholeImage from "../assets/images/LeonPahole.png";
-import { importImage } from "astro-imagetools/api";
+import { PersonalPhotoPath, getImageSrcForSocialPreview } from "../utils/image";
+import { PersonalTitle, PersonalDescription } from "../data/presentation";
+import { twitter } from "../data/socials";
 
 import "@fontsource-variable/red-hat-mono";
 
 import "../styles/colors.css";
 import "../styles/utils.css";
+
 interface Props {
   title?: string;
   description?: string;
   socialCard?: {
-    title?: string;
     type?: "website" | "article";
     image?: string;
-    description?: string;
     twitterType?: "summary" | "summary_large_image";
   };
 }
@@ -28,29 +28,21 @@ const {
   socialCard: socialCardProp,
 } = Astro.props;
 
-const description =
-  descriptionProp ??
-  "I'm Leon. I'm a software engineer with management experience and strong soft skills.";
-
-const title =
-  (titleProp ? `${titleProp} | ` : "") + "Leon Pahole - Software Engineer";
+const title = `${titleProp ? `${titleProp} | ` : ""}${PersonalTitle}`;
+const description = descriptionProp ?? PersonalDescription;
 
 const socialCard = {
-  title: socialCardProp?.title ?? title,
+  title,
+  description,
   type: socialCardProp?.type ?? "website",
-  image:
-    socialCardProp?.image ??
-    (await importImage(
-      "/src/assets/images/LeonPahole.png?width=800&q=60&format=jpg",
-    )),
-  description: socialCardProp?.description ?? description,
+  image: new URL(
+    await getImageSrcForSocialPreview(
+      socialCardProp?.image ?? PersonalPhotoPath,
+    ),
+    Astro.site,
+  ).href,
   twitterCard: socialCardProp?.twitterType ?? "summary",
 };
-
-const TwitterUsername = "@LeonPahole";
-
-const socialImage = new URL(socialCard.image ?? LeonPaholeImage.src, Astro.site)
-  .href;
 ---
 
 <!doctype html>
@@ -63,16 +55,16 @@ const socialImage = new URL(socialCard.image ?? LeonPaholeImage.src, Astro.site)
         basic: {
           title: socialCard.title,
           type: socialCard.type ?? "website",
-          image: socialImage,
+          image: socialCard.image,
         },
         optional: {
           description: socialCard.description,
         },
       }}
       twitter={{
-        creator: TwitterUsername,
+        creator: twitter.name,
         title: socialCard.title,
-        image: socialImage,
+        image: socialCard.image,
         description: socialCard.description,
         card: socialCard.twitterCard,
       }}

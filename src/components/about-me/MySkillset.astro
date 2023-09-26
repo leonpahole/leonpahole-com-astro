@@ -6,6 +6,7 @@ import EmailIcon from "../../assets/icons/social/EmailIcon.astro";
 import LinkedinIcon from "../../assets/icons/social/LinkedinIcon.astro";
 import GithubIcon from "../../assets/icons/social/GithubIcon.astro";
 import WebIcon from "../../assets/icons/social/WebIcon.astro";
+import { PersonalDescription } from "../../data/presentation";
 
 const socialListItemClasses =
   "flex items-center mr-3 last:m-0 not-italic flex-shrink-0";
@@ -24,7 +25,7 @@ const socialIconClasses = "h-6 w-6 mr-1";
 
     <ul class="text-body">
       <li>
-        Software engineer with management experience and strong soft skills.
+        {PersonalDescription}
       </li>
       <li>Age: 26</li>
       <li>Location: Maribor, Slovenia</li>

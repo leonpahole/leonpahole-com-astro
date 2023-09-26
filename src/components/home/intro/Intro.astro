@@ -1,6 +1,7 @@
 ---
 import SocialLinks from "./SocialLinks.astro";
 import PersonalPhoto from "../../shared/PersonalPhoto.astro";
+import { PersonalDescription } from "../../../data/presentation.ts";
 ---
 
 <section
@@ -9,10 +10,7 @@ import PersonalPhoto from "../../shared/PersonalPhoto.astro";
   <div>
     <h1 class="text-regular-big">
       <span class="block">Hi, I'm Leon.</span>
-      <span class="block"
-        >I'm a software engineer with management experience and strong soft
-        skills.</span
-      >
+      <span class="block">{PersonalDescription}</span>
     </h1>
 
     <SocialLinks />

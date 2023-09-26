@@ -4,6 +4,7 @@ import BlogPostList from "../../components/blog/BlogPostList.astro";
 import BlogPostListPagination from "../../components/blog/BlogPostListPagination.astro";
 import Layout from "../../layouts/Layout.astro";
 import type { GetStaticPaths } from "astro";
+import { BlogDescription } from "../../data/presentation";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
@@ -20,19 +21,13 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 };
 
 const { page } = Astro.props;
+
+const pageName = page.currentPage > 1 ? ` - page ${page.currentPage}` : "";
 ---
 
-<Layout
-  title={`Blog${page.currentPage > 1 ? ` - page ${page.currentPage}` : ""}`}
-  description="I'm Leon. I'm a software engineer. I write about web development, soft skills and my experience in the industry."
-  socialCard={{
-    title: "Blog | Leon Pahole - Software Engineer",
-    description:
-      "I'm Leon. I'm a software engineer. I write about web development, soft skills and my experience in the industry.",
-  }}
->
+<Layout title={`Blog${pageName}`} description={BlogDescription}>
   <h2 class="text-h2 uppercase text-primary">
-    All posts{page.currentPage > 1 ? ` - page ${page.currentPage}` : ""}
+    All posts{pageName}
   </h2>
 
   <BlogPostList posts={page.data} />
