@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props;
   <BlogPostListItemInfoBar post={frontmatter} />
 
   <div class="my-5">
-    <div class="aspect-image overflow-hidden rounded-2xl">
+    <div class="isolate aspect-image overflow-hidden rounded-2xl">
       <Picture src={frontmatter.cover_image.src} alt="" layout="fill" />
     </div>
     <p class="mt-1 text-center text-details">
