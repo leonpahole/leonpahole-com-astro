@@ -1,0 +1,15 @@
+---
+import { skillset } from "../../../data/experience";
+---
+
+<ul class="flex list-inside list-disc flex-wrap gap-x-3 gap-y-2 text-body">
+  {
+    skillset.map((skill) => {
+      return (
+        <li>
+          <span>{skill}</span>
+        </li>
+      );
+    })
+  }
+</ul>

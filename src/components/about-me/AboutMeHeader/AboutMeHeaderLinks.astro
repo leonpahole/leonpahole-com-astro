@@ -1,0 +1,42 @@
+---
+import EmailIcon from "../../../assets/icons/social/EmailIcon.astro";
+import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
+import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
+import WebIcon from "../../../assets/icons/social/WebIcon.astro";
+
+import { email, linkedin, github } from "../../../data/socials";
+
+const socialListItemClasses = "mr-3 last:m-0 flex-shrink-0";
+const socialListItemLinkClasses = "flex items-center not-italic";
+const socialIconClasses = "h-6 w-6 mr-1";
+---
+
+<address class="mt-2 text-body">
+  <div class={socialListItemClasses + " mb-2"}>
+    <a class={socialListItemLinkClasses} href={Astro.site}>
+      <WebIcon class={socialIconClasses} />
+      <span>{Astro.site?.host}</span>
+    </a>
+  </div>
+
+  <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row sm:items-center">
+    <li class={socialListItemClasses}>
+      <a class={socialListItemLinkClasses} href={email.url}>
+        <EmailIcon class={socialIconClasses} />
+        <span>{email.name}</span>
+      </a>
+    </li>
+    <li class={socialListItemClasses}>
+      <a class={socialListItemLinkClasses} href={linkedin.url}>
+        <LinkedinIcon class={socialIconClasses} />
+        <span>{linkedin.name}</span>
+      </a>
+    </li>
+    <li class={socialListItemClasses}>
+      <a class={socialListItemLinkClasses} href={github.url}>
+        <GithubIcon class={socialIconClasses} />
+        <span>{github.name}</span>
+      </a>
+    </li>
+  </ul>
+</address>
