@@ -6,6 +6,7 @@ import {
 } from "../../utils/image";
 import { PersonalTitle, PersonalDescription } from "../../data/presentation";
 import { twitter } from "../../data/socials";
+import GTMHead from "../../components/analytics/GTMHead.astro";
 
 export interface HTMLHeadProps {
   title?: string;
@@ -43,6 +44,8 @@ const socialCard = {
 ---
 
 <head>
+  {import.meta.env.PROD && <GTMHead />}
+
   <SEO
     charset="UTF-8"
     title={title}

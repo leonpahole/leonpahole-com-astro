@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer.astro";
 import HTMLHead, {
   type HTMLHeadProps,
 } from "../components/meta/HTMLHead.astro";
+import GTMBody from "../components/analytics/GTMBody.astro";
 
 import "@fontsource-variable/red-hat-mono";
 
@@ -18,7 +19,9 @@ const { ...headProps } = Astro.props;
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <HTMLHead {...headProps} />
+
   <body class="min-w-[320px] bg-background font-mono text-text">
+    {import.meta.env.PROD && <GTMBody />}
     <div class="!print:p-[0] mx-auto box-content max-w-screen px-4 md:px-8">
       <Navbar />
       <main>
