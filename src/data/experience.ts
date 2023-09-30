@@ -431,7 +431,7 @@ export const experience: CompanyEntry[] = [
           "Onboarded new team members after I delivered the initial solution.",
           "Implemented a quick prototype of the frontend in Angular.",
         ],
-        from: "December 2023",
+        from: "December 2022",
         to: "April 2023",
       },
       {
