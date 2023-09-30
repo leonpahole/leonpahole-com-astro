@@ -479,7 +479,7 @@ export const experience: CompanyEntry[] = [
           "Collected feedback from end users, and implemented it into the products.",
           "Participated in product demos, where I learned how to communicate with end users and show the value that the product brings.",
           "Wrote user instructions and answered product related questions.",
-          "Adviced the company on how to streamline the deployment process, which saved the team multiple hours on each deployment.",
+          "Advised the company on how to streamline the deployment process, which saved the team multiple hours on each deployment.",
         ],
         from: "August 2020",
         to: "April 2023",
