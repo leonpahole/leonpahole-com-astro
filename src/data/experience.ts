@@ -517,7 +517,7 @@ export const experience: CompanyEntry[] = [
           "Onboarded on a complex project and eventually took ownership of it.",
           "Architected backend and frontend solutions, and wrote the code for them.",
         ],
-        from: "March 2018",
+        from: "October 2017",
         to: "September 2021",
       },
     ],
