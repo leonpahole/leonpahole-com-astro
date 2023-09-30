@@ -473,7 +473,7 @@ export const experience: CompanyEntry[] = [
           Estimations,
         ],
         summary:
-          "Architecting and implemetning multiple logistics products, communicating with the end users, collecting their feedback, and launching the products to production. Advising the company on architecture and deployment.",
+          "Architecting and implementing multiple logistics products, communicating with the end users, collecting their feedback, and launching the products to production. Advising the company on architecture and deployment.",
         bulletPoints: [
           "Architected solutions for all products, and wrote the code for them.",
           "Collected feedback from end users, and implemented it into the products.",
