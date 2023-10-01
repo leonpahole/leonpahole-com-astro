@@ -78,7 +78,7 @@ In practice, however, such visibility will be hard to see unless we dig into eac
 
 How can we solve this?
 
-### Do we even need enums?
+## Do we even need enums?
 
 Before we try to solve this issue, we must ask ourselves if enums are even appropriate for our use case. We could alternatively use polymorphic classes to get rid of conditionals.
 
@@ -92,7 +92,7 @@ In addition, JavaScript front-end applications are often structured in a way tha
 
 With that in mind, let's look at an alternative approach.
 
-### Getting rid of if statements
+## Getting rid of if statements
 
 Here's a useful approach that I used a lot in the past - getting rid of if statements using a mapper object. Let's see the refactored `getDescription` function:
 
@@ -146,7 +146,7 @@ The last two lines of the function could be a one-liner, but we separate it into
 
 Note: be vary of `this` binding when using functions this way. You might have to wrap functions in another function to preserve the correct `this` binding.
 
-### Bringing the code to one place
+## Bringing the code to one place
 
 The approach above works well to make sure we never forget to add a new enum value to each of the functions, but it still suffers from the problem of code separation. Preferably, all code for each of the aggregation functions would be in a single file, so we could quickly inspect how each of the aggregations behaves. Here's the pattern I use for this:
 
@@ -224,6 +224,6 @@ The type-safe mapper ensures that we always implement aggregation methods in the
 
 If we want to add a new function or property to the aggregation method, we must add it to the `IAggregationMethod` interface. This triggers an error in all files, associated with currently implemented aggregation methods, so we have to implement the new function or property for all of them. TypeScript prevents us from leaving the code in an incomplete state.
 
-# Conclusion
+## Conclusion
 
 Enums can be a really useful tool, as long as we manage to contain them to prevent future maintainability issues. In this blog post, I presented my way of managing TypeScript enums, which helps me keep my enums readable and manageable as the codebase expands.

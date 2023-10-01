@@ -100,7 +100,7 @@ Perfect - the code is shorter and all implementation details of the form are hid
 
 The code above will not work if you try to run it, but we can still achieve this by using a form library. In this blog post, I'll be using [Formik](https://formik.org/) to replicate the code above. But we'll also be adding more complex inputs and form validation, and everything will stay type-safe with the help of Typescript!
 
-# The goal
+## The goal
 
 The form we will be building has some text inputs, a dropdown, and a custom-built rating input. I wanted to include a custom-built input to demonstrate how Formik's power is not tied just to built-in HTML inputs, but it can also be extended to handle anything you want. The form inputs will also have a label, an optional help message, and an error message.
 
@@ -112,7 +112,7 @@ The form we will build is a simple sign-up form for developers.
 
 If you'd just like to see the end code, it's available on Github here: [https://github.com/leonpahole/formik-custom-fields-typescript-example](https://github.com/leonpahole/formik-custom-fields-typescript-example)
 
-# Preparation
+## Preparation
 
 This blog post will not focus on the complete basics of Formik. I suggest checking out the amazing documentation of Formik for a quick overview here: [https://formik.org/docs/overview](https://formik.org/docs/overview).
 
@@ -123,7 +123,7 @@ yarn add formik
 yarn add yup
 ```
 
-# The process
+## The process
 
 I like to build forms from the bottom-up approach:
 
@@ -133,7 +133,7 @@ I like to build forms from the bottom-up approach:
 
 Let's get started!
 
-## Step 1: stand-alone input component
+### Step 1: stand-alone input component
 
 The stand-alone input component (referred to as the "input component" for the rest of this chapter) is a simple React component that is oblivious to Formik. It is written as a reusable component that is not dependent on any global state; it receives props and emits all state changes.
 
@@ -141,7 +141,7 @@ In its simplest form, we can imagine it as a text input that accepts a value and
 
 Based on the form image above, we will have three types of inputs - a text input (for email, full name, and password), a dropdown (for gender), and a custom input for selecting the developer's skill level - we'll call this the `rating input`.
 
-### Text input
+#### Text input
 
 Here's the code for the text input (I'm excluding the CSS here, as it's of lesser importance):
 
@@ -324,7 +324,7 @@ If we do this, then `onKeyDown`, `onChange` and `className` props of the input w
 
 The rest of the component deals with rendering the `label`, `helpText`, and `errorText`, which should be straightforward.
 
-### Dropdown
+#### Dropdown
 
 The dropdown is structurally very similar to the input. In fact it is so similar, that you'll notice some code repetition, which we'll deal with shortly.
 
@@ -547,7 +547,7 @@ export const TextInput: React.FC<TextInputProps> = (props) => {
 };
 ```
 
-### Rating input
+#### Rating input
 
 The biggest difference between the inputs we've been building so far and the rating input is that the rating input will not be extended from a built-in HTML input component. This means we will not declare built-in props for this component, but we will have to declare a couple of props to make sure everything is working properly once we insert the input into the form. We'll also have to do some additional styling to make sure the component looks the way we want it.
 
@@ -632,7 +632,7 @@ export const getNumberSequence = (from: number, to: number): number[] => {
 
 We render the number of circles needed to get the from - to rating picker. The circles are buttons behind the scenes so that they are accessible. We assign a special class to the currently selected rating.
 
-## Step 3: building the form
+### Step 3: building the form
 
 We will skip step 2 for now to demonstrate the immense improvement that step 2 brings. Let's build the form. We'll use the [basic Formik example](https://formik.org/docs/overview#the-gist) as a reference to wire the inputs into the form. We'll also use Yup to declare our validation schema.
 
@@ -897,7 +897,7 @@ The rating input is slightly different than the rest, as it doesn't behave as re
 
 Overall, we can say that we have slightly improved the form-building experience, but a lot is still left to be desired. Let's look at how we can achieve a better, more concise form.
 
-## Step 2: create a custom Formik field for the stand-alone input component that we built in step 1
+### Step 2: create a custom Formik field for the stand-alone input component that we built in step 1
 
 We will now create another component that will serve as a link between our input field and the form that the input belongs to. We will do this by hooking into the form's state and pull out the information about the input field. We will then apply this information to our input. This will allow us to remove the boilerplate from our form.
 
@@ -1142,7 +1142,7 @@ export const SignupForm: React.FC = () => (
 
 Great, that's much more readable! The boilerplate has been completely removed. We could further simplify this by extracting the form into a separate file, but I'll leave that up as an exercise for the reader.
 
-# Conclusion
+## Conclusion
 
 Hopefully, this blog post demonstrated the powers of Formik's custom fields and how they help make forms concise, readable, and boilerplate-free.
 

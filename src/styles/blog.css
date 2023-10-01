@@ -6,6 +6,10 @@
   @apply !mb-4 !mt-7.5 !text-h3 !text-primary;
 }
 
+.blog-content h4 {
+  @apply !mb-3 !mt-4 !text-h4 !text-primary;
+}
+
 .blog-content strong {
   @apply !font-normal !text-primary;
 }

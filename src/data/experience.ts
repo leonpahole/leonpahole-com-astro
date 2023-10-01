@@ -583,5 +583,6 @@ export const skillset = [
   "Ownership",
   "Mentoring",
   "Public speaking",
+  "Attention to detail",
   "Written communication",
 ];

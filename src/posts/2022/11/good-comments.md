@@ -16,7 +16,7 @@ cover_image:
 
 My take on comments has changed quite significantly throughout my programming career.
 
-# The what-type comments
+## The what-type comments
 
 In university, the professors often told us that we need to write a lot of comments so that they'll be able to understand the code when they review it. Because of this, I got into a habit of writing a lot of **what-type** comments.
 
@@ -64,7 +64,7 @@ function subtractTwoNumbers(num1: number, num2: number): number {
 
 The name of the function doesn't match the comment above it. This frequently happens if the code is copy-pasted and the comment is not modified. Other times it could be because the code has changed, but the author forgot to also change the comment. This happens especially if the code and the comments are not in the same place in the code.
 
-# The self-documenting approach
+## The self-documenting approach
 
 I was first introduced to the self-documenting approach to writing comments during [an excellent presentation on Clean code](https://www.youtube.com/watch?v=7EmboKQH8lM&list=PLmmYSbUCWJ4x1GO839azG_BBw8rkh-zOj).
 
@@ -137,7 +137,7 @@ When writing self-documenting code, I typically do it iteratively. The first ver
 
 This iterative approach works well because it balances speed and quality. Typically, once we have the whole code written, coming up with good variable names is much easier than if we try to write good code from the beginning. Apart from this, in some cases, we'll realize that the code we are writing is not going to work and we have to backtrack. If we write good code from the beginning, this will mean a lot of wasted effort.
 
-# Why?
+## Why?
 
 I've been practicing the self-documenting approach for quite some time. It felt great, apart from a few frustrating moments when it was hard to come up with a good name for a function or a variable. I rarely left comments on my code, as I felt that the code itself did a good job of explaining itself.
 
@@ -202,7 +202,7 @@ It's also important to stress that the new developer might not necessarily be a 
 
 > _Wait, **why** did I write this like that? **Why** not just measure the media track?_
 
-# The why-type comments
+## The why-type comments
 
 Because I've been observing that the longer the projects go, the more I'm asking myself **why** (which wastes time and creates unnecessary frustration), I've decided to address the issue by using the why-type comments.
 
@@ -283,7 +283,7 @@ function getVideoStreamDimensions(videoStream: MediaStream): Size | null {
 
 I've been guilty of such comments in the past. I felt that reiterating in the comment what the code did and then adding the exclamation mark at the end, would somehow communicate the idea behind the code. But of course, this comment is essentially useless and tells us nothing of substance.
 
-# Conclusion
+## Conclusion
 
 I've had a rocky relationship with code comments ever since I started coding. But throughout the mostly useless (and dangerous) why-type comments, to no comments with the self-documenting approach, to the **why** problematic, I've learned a lot about what I need to properly communicate my intentions in code to my future self and other people.
 

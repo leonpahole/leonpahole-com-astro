@@ -45,7 +45,7 @@ I usually write some helper bash scripts to help me with building and deployment
 
 _Note that this procedure is used for my personal projects, which don't require complex CI/CD pipelines or multi-server deployments (due to the fact that I work on them alone and they aren't complex)._
 
-# Local development
+## Local development
 
 First, we will create an environment that will allow us to efficiently develop Wordpress sites locally using Docker. This will not require any installations, all you need is Docker.
 
@@ -311,7 +311,7 @@ You can now visit `localhost:8080` and begin your Wordpress setup. After finishi
 
 Also, do not forget to create child themes if you wish to modify twenty\* themes.Do not modify them directly, as they will be _overwritten_ when you restart the container.
 
-# Deployment
+## Deployment
 
 Next step is to deploy the site. I usually deploy early and deploy often. We will use docker-compose for production deployment, although Docker swarm is a more suitable choice. **I will discuss Docker Swarm in a later blog post**.
 

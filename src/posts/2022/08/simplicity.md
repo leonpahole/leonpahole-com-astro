@@ -15,7 +15,7 @@ cover_image:
 
 The first time I heard the phrase _Keep it simple, stupid_ (abbreviated as KISS) was in a university class. After realizing the professor wasn't talking about the rock band, I tried to wrap my head around the logic behind the statement.
 
-# My first KISS
+## My first KISS
 
 The KISS principle is quite simple (no pun intended) to understand - in the context of computer science, it simply (I swear, I'm not doing this on purpose) states that when designing systems and writing code, things should be as simple as they can be.
 
@@ -23,7 +23,7 @@ The whole principle sounded a bit abstract, but what I really couldn't grasp is 
 
 So, I wiped the thought of the uncomprehensible KISS principle away and went on with my life.
 
-# Building a complex system
+## Building a complex system
 
 Sometime later at work, I was tasked with designing and implementing a sub-system within an existing system that was already in production. With barely any experience under my belt, I jumped onto the challenge to prove myself.
 
@@ -31,7 +31,7 @@ The thought of how complex this new sub-system was going to be has been dwelling
 
 Fast-forward six months, the system was done and shipped. I never felt better in my life (except when I heard Master Of Puppets by Metallica for the first time). The system was so complex and wired with difficult algorithms that even I, the author, had trouble understanding it, let alone other people. I also made sure that the program ran as fast as I could make it - I optimized the living lights out of that code. I even had to write additional documentation for how to test the thing for the regular user. And finally, I made up my own terminology for different parts of the project. The amount of code written was enormous. So complex, so large, so fast, so hard to understand ... so amazing!
 
-# Client's perspective: what actually matters
+## Client's perspective: what actually matters
 
 Let's fast-forward again, to the time I [briefly worked as a project manager](/blog/post/the-return/). One of the most important lessons I learned while communicating with clients as a PM was that what customers want the most is value for the money that they are investing into the product. And that value is in the product, including all the functionality it entails. The client does not either know or care about how complex the code is behind the scenes nor are they - in most cases - concerned about the speed it runs at. Of course, if the app is so slow that it is barely usable or it computes mission-critical data, it must be fast - but in that case, the speed can be thought of as functionality, which brings us back to the point of value.
 
@@ -44,7 +44,7 @@ There are usually just a couple of concerns related to the code that customers b
 
 This experience opened my eyes and made me rethink that complex system I wrote some time ago.
 
-# Simplicity takes the driving wheel
+## Simplicity takes the driving wheel
 
 After I stepped down as a PM and returned to programming, I felt a lot different about the code I was about to write. Over time, I naturally started writing code that was simple and also encouraged others to follow the same principles.
 
@@ -120,19 +120,19 @@ Complex APIs can be learned, but it takes time. And sometimes there is no way ar
 
 More controversial opinions incoming (at least for React developers): I prefer MobX over Redux. Yes, MobX might be slower and less adopted, but it is so simple to use - anyone with basic knowledge of OOP can use it. On the other hand, Redux requires a lot of upfront learning and is overall just a lot more complex. To be clear, I don't disregard Redux and I think it's a fantastic library, but I feel like with MobX I can achieve the same things, albeit with a lot simpler and more intuitive approach.
 
-# Don't get too obsessed with simplicity, though
+## Don't get too obsessed with simplicity, though
 
 Paradoxically, if you spend too much time trying to simplify things, you'll end up complicating it in your mind, which can result in frustrations, (code) writer's block, and missed deadlines. When I develop features, I often write the worst code possible first (except the public-facing APIs and tests for it), spending more time thinking about the architecture than the structure of the code, and then, before checking everything into version control, I refactor the implementation into the simpler design by applying principles I wrote about above.
 
 The refactoring process is incremental and it can be done periodically until we get satisfied with the result. Refactoring can be postponed if we are pressured by deadlines. The important takeaway is that it's okay for the code to not be 100% simple. Often I've actually discovered that leaving the code as is for a couple of days will spark more ideas on how to make it simpler. Simplicity is imbued into the development lifecycle, not a one-time fix.
 
-# Reflecting back
+## Reflecting back
 
 Looking back at the sub-system I built, my feelings towards it have definitely changed. First of all, the system was not complex, it was overly complicated. The only thing that I achieved with it is being proud of how complicated of a system I can write. And even though the system ended up working just fine in production, it was pestered with a big maintainability issue, since no one really knew what was going on inside the code. This is mainly due to the made-up terminology and overengineered algorithms.
 
 If I were to rewrite that system, I would start from scratch and map out black boxes for each of the processes in the system. This would allow me to think about the system in a simpler way. When implementing each of the black boxes, I would start with designing the API and writing tests for it. Finally, I would schedule a few calls with the client or my team so we could agree on the naming scheme.
 
-# Simplifying daily life
+## Simplifying daily life
 
 One thing I love about computer science is how many of its lessons can be applied to real life. I've been using the KISS principle in my day-to-day life a lot.
 
@@ -144,6 +144,6 @@ One thing I love about computer science is how many of its lessons can be applie
 
 **Stress management** Having a simpler, clear-cut life is much less stressful than having to keep up with complex routines and processes! I often optimize processes by making them simpler and thus making my life easier and more productive.
 
-# Conclusion
+## Conclusion
 
 In the spirit of the contents of this blog post, I'll keep the conclusion simple - simplicity is my primary driver when I write code, as well as in daily life. It's often a deciding factor for resolving dilemmas and makes my life more lightweight.

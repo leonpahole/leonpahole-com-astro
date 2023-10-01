@@ -29,7 +29,7 @@ So this time I've focused more on implementing changes in my environment or habi
 
 I should note that I'm only at the beginning of the journey here - although I've noticed my posture getting better, a lot of work still needs to be done.
 
-# Elevating the screen
+## Elevating the screen
 
 This is arguably the most important change I've implemented. If the screen is too low, it forces one to look down at it, which automatically prevents good posture.
 
@@ -39,7 +39,7 @@ If you work with a laptop, I strongly suggest getting a good laptop stand. Becau
 
 My recommendation is to get a laptop stand that is stable, easily foldable (so it can be adjusted to fit any height just by using your hands), and small when it is fully folded (so you can carry it with you anywhere).
 
-# Portability is important
+## Portability is important
 
 In the previous chapter, I emphasized that having a foldable laptop stand that you can carry anywhere is of utmost importance. But I want to emphasize this again because I think it is crucial for people who use laptops.
 
@@ -49,7 +49,7 @@ I am a big believer in portable workspaces. I can fit my entire workspace in my 
 
 This allows me to be productive and sit properly in any environment, be it at home, in a library or at my parent's house.
 
-# Touch typing
+## Touch typing
 
 I started using the computer when I was about 12. Back then there was no one around that could show me how to properly use the computer equipment, which resulted in me picking up the hunt-and-peck style of keyboard typing. In this technique, only the index fingers are being used to type, and the keyboard must be looked at to find the right key to hit. Needless to say, this is very slow.
 
@@ -67,7 +67,7 @@ In total, it took me about a month of 10 minutes per day of practice on [keybr](
 
 I can't type as fast as I can with my hunt-and-peck technique (yet), but speed is not everything - the important part is that my posture remains proper when I type.
 
-# Reminders
+## Reminders
 
 One thing I've learned is that when it comes to maintaining a good sitting posture, the inner perfectionist in me should stay outside the front door. Even though I've been practicing for some time now, I know that sitting properly 100% of the time is really difficult, if not impossible.
 
@@ -77,7 +77,7 @@ The important part in my opinion is to anticipate that bad posture will happen a
 
 I use the reminder app [Stretchly](https://hovancik.net/stretchly/). The app periodically (configurable) pops up a full-screen reminder with a motivational quote. This gently reminds me to sit up straight on the chair. I also use these reminders to take a sip of water and stand up from the chair if I feel like I've been sitting for too long.
 
-# Conclusion
+## Conclusion
 
 Proper sitting posture is difficult, and I am doing my best to slowly adopt it into my everyday life.
 
