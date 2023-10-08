@@ -113,7 +113,7 @@ Here we leverage the power of the JavaScript bracket notation for dynamic proper
 
 In addition, the mapper object has an explicit type of `Record<AggregationMethod, string>`, which means we are declaring an object with keys of type `AggregationMethod` and values of type `string`. This forces us to specify all enum values in the keys of the object; otherwise Typescript will refuse to compile:
 
-![An image showing an error due to a missing enum type in the mapper object](/src/assets/blog/images/managing-ts-enums/ts-enum-mapper-error.png)
+![An image showing an error due to a missing enum type in the mapper object](../../../assets/blog/images/managing-ts-enums/ts-enum-mapper-error.png)
 
 This makes sure that we will never forget to add a new value into the mapper whenever we create a new enum value.
 

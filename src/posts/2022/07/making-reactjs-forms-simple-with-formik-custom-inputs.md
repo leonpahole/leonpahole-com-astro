@@ -106,9 +106,9 @@ The form we will be building has some text inputs, a dropdown, and a custom-buil
 
 The form we will build is a simple sign-up form for developers.
 
-![Form we'll build](/src/assets/blog/images/formik-forms/resulting-form.png)
+![Form we'll build](../../../assets/blog/images/formik-forms/resulting-form.png)
 
-![Submitted form with errors](/src/assets/blog/images/formik-forms/resulting-form-errors.png)
+![Submitted form with errors](../../../assets/blog/images/formik-forms/resulting-form-errors.png)
 
 If you'd just like to see the end code, it's available on Github here: [https://github.com/leonpahole/formik-custom-fields-typescript-example](https://github.com/leonpahole/formik-custom-fields-typescript-example)
 

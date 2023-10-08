@@ -17,7 +17,7 @@ There are many programmer stereotypes roaming around the Internet. But perhaps t
 
 Humorous perhaps, the stereotype inspired many memes, T-shirt designs, and quotes.
 
-![The programmer stereotype meme](/src/assets/blog/images/programmer-stereotype/programmer-stereotype.png)
+![The programmer stereotype meme](../../../assets/blog/images/programmer-stereotype/programmer-stereotype.png)
 
 Programmers mostly laugh at the stereotype, often even embracing it as part of our
 culture. Most people, be it programmers or non-programmers, agree that the _Typical

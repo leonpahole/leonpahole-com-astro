@@ -218,7 +218,7 @@ Here is the project for reference: [DevOps project](https://github.com/leonpahol
 
 Let's talk for a bit about the architecture of our application. We will have 4 application containers; namely frontend, backend, database and database admin. From Docker's point of view, they will not be exposing any ports to the outside world. Instead, we will have another container, called a proxy, sitting in front of these containers, accepting every request and forwarding it to containers. This proxy will define all virtual hosts and ports to forward the requests to containers. In production, this proxy will also take care of SSL certificates.
 
-![App architecture](/src/assets/blog/covers/traefik-cover.png)
+![App architecture](../../../assets/blog/covers/traefik-cover.png)
 
 ### Local testing Swarm file
 

@@ -30,7 +30,7 @@ For demo purposes, I will use my simple app repositories (although simple, they 
 
 Here is how the architecture looks like:
 
-![Architecture we'll build](/src/assets/blog/images/traefik-nodejs/app-architecture.png)
+![Architecture we'll build](../../../assets/blog/images/traefik-nodejs/app-architecture.png)
 
 We will use the following domains (`mydomain.com` is a placeholder for your actual domain):
 

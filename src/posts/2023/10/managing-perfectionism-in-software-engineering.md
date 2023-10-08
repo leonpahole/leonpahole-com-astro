@@ -110,7 +110,7 @@ However, my inner perfectionist also likes to negotiate. **If I present a good c
 
 When it comes to code, it's good to think about it in terms of the modified [Eisenhover matrix](https://www.eisenhower.me/eisenhower-matrix/).
 
-![](/src/assets/blog/images/managing-perfectionism-in-software-engineering/code-matrix.png)
+![](../../../assets/blog/images/managing-perfectionism-in-software-engineering/code-matrix.png)
 
 There are four quadrants:
 
