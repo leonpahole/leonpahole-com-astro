@@ -19,7 +19,7 @@
 }
 
 .blog-content em {
-  @apply !font-light !italic;
+  @apply !font-normal !italic;
 }
 
 .blog-content ul,
