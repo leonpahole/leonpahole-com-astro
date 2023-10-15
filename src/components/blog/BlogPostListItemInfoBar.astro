@@ -1,6 +1,7 @@
 ---
 import type { BlogPostFrontmatter } from "../../types/blog-post";
 import BlogPostListItemCategories from "./BlogPostListItemCategories.astro";
+import ConnectWithMe from "../shared/ConnectWithMe.astro";
 
 interface Props {
   post: BlogPostFrontmatter;
@@ -18,3 +19,11 @@ const { post } = Astro.props;
    •
   <BlogPostListItemCategories categories={post.categories} />
 </div>
+
+<address class="mt-2 flex flex-wrap items-center gap-1.75 not-italic">
+  <p class="flex-shrink-0 text-details">
+    Written by <span class="font-bold">Leon Pahole</span>
+  </p>
+   •
+  <ConnectWithMe class="text-details" />
+</address>
