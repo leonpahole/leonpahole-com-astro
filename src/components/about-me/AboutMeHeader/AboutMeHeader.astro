@@ -10,10 +10,10 @@ import AboutMeHeaderLinks from "./AboutMeHeaderLinks.astro";
   <div class="text-regular-big">
     <div class="flex items-center justify-between">
       <h1 class="print:text-h1 print:text-primary">Leon Pahole</h1>
-      <button class="print:hidden" type="button" onclick="print()">
-        <span class="visually-hidden">Print this page</span>
+      <a class="print:hidden" href="/leonpahole_cv.pdf" download>
+        <span class="visually-hidden">Print my CV</span>
         <PrintIcon class="h-6 w-6" />
-      </button>
+      </a>
     </div>
 
     <AboutMeHeaderPersonalInfo />
