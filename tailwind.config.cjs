@@ -43,6 +43,8 @@ module.exports = {
           pxToRem(28),
           {
             fontWeight: 500,
+            lineHeight: 1.5,
+            letterSpacing: pxToRem(1),
           },
         ],
         h4: [

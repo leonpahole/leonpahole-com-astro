@@ -140,6 +140,12 @@ const React: Skill = {
   group: SkillType.Frontend,
 };
 
+const Accessibility: Skill = {
+  id: "accessibility",
+  name: "Accessibility",
+  group: SkillType.Frontend,
+};
+
 const ReactNative: Skill = {
   id: "react-native",
   name: "React Native",
@@ -308,10 +314,30 @@ const TeamLeadership: Skill = {
 
 export const experience: CompanyEntry[] = [
   {
+    name: "Amazon",
+    url: "https://www.amazon.com",
+    from: "May 2024",
+    to: undefined,
+    roles: [
+      {
+        name: "Frontend engineer",
+        skills: [React, Accessibility],
+        summary:
+          "Building delightful, accessible experiences for the advertising sector. The experiences receive hundreds of thousands of views.",
+        bulletPoints: [
+          "Frontend development with accessibility and customers in the center.",
+          "Transferring knowledge to my team using my public speaking skills.",
+        ],
+        from: "May 2024",
+        to: undefined,
+      },
+    ],
+  },
+  {
     name: "Povio inc.",
     url: "https://povio.com/",
     from: "October 2021",
-    to: undefined,
+    to: "May 2024",
     roles: [
       {
         name: "Devops engineer and architect",
@@ -332,7 +358,7 @@ export const experience: CompanyEntry[] = [
           "Helped solve problems on a project, which was in a bad state, and got it back on track.",
         ],
         from: "May 2023",
-        to: undefined,
+        to: "May 2024",
       },
       {
         name: "Frontend academy lead",
@@ -362,7 +388,7 @@ export const experience: CompanyEntry[] = [
           "Conducting and organizing team meetings",
         ],
         from: "November 2022",
-        to: undefined,
+        to: "May 2024",
       },
       {
         name: "Frontend developer",
@@ -378,6 +404,7 @@ export const experience: CompanyEntry[] = [
           "Currently working on an external project, where I communicate with the client directly. I save them time by using written communication, and by understanding the requirements without the need for a meeting.",
         ],
         from: "October 2021",
+        to: "May 2024",
       },
     ],
   },
@@ -385,7 +412,7 @@ export const experience: CompanyEntry[] = [
     name: "U-centrix",
     url: "https://u-centrix.com/en/",
     from: "October 2017",
-    to: undefined,
+    to: "May 2024",
     roles: [
       {
         name: "[Confidential project] mobile app developer",
@@ -400,6 +427,7 @@ export const experience: CompanyEntry[] = [
           "My full-stack background allows me to brainstorm solutions with my team members on the backend.",
         ],
         from: "February 2023",
+        to: "May 2024",
       },
       {
         name: "Technical mentor, advisor, and architect",
@@ -413,6 +441,7 @@ export const experience: CompanyEntry[] = [
           "Providing feedback and improvements suggestions for team allocation and company structure, which optimizes efficiency and saves money.",
         ],
         from: "October 2021",
+        to: "May 2024",
       },
       {
         name: "[Confidential project] Backend developer",

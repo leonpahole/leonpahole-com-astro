@@ -1,12 +1,20 @@
 ---
-import { PersonalDescription } from "../../../data/presentation";
+import PrintIcon from "../../../assets/icons/PrintIcon.astro";
 ---
 
 <ul class="text-body">
-  <li>
-    {PersonalDescription}
+  <li>Web developer, currently frontend engineer at Amazon.</li>
+  <li class="mb-2">
+    <a
+      class="flex items-center gap-2 underline print:hidden"
+      href="/leonpahole_cv.pdf"
+      download
+    >
+      <span class="text-body">Download one-page CV</span>
+      <PrintIcon class="h-6 w-6" />
+    </a>
   </li>
-  <li>Age: 26</li>
-  <li>Location: Maribor, Slovenia</li>
-  <li>Education: Bachelor's degree in Computer Science</li>
+  <li>Age: 27</li>
+  <li>Location: London, UK</li>
+  <li class="mb-2">Education: Bachelor's degree in Computer Science</li>
 </ul>
