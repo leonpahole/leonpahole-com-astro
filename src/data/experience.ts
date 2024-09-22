@@ -244,6 +244,12 @@ const Estimations: Skill = {
 
 /* soft skills */
 
+const Writing: Skill = {
+  id: "writing",
+  name: "Writing",
+  group: SkillType.SoftSkills,
+};
+
 const Mentoring: Skill = {
   id: "mentoring",
   name: "Mentoring",
@@ -321,12 +327,11 @@ export const experience: CompanyEntry[] = [
     roles: [
       {
         name: "Frontend engineer",
-        skills: [React, Accessibility],
+        skills: [React, Accessibility, Writing],
         summary:
-          "Building delightful, accessible experiences for the advertising sector. The experiences receive hundreds of thousands of views.",
+          "Building accessible and delightful front-end advertising experiences that receive hundreds of thousands of views.",
         bulletPoints: [
-          "Frontend development with accessibility and customers in the center.",
-          "Transferring knowledge to my team using my public speaking skills.",
+          "Frontend development with focus on accessibility and customer experience.",
         ],
         from: "May 2024",
         to: undefined,
