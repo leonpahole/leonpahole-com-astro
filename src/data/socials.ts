@@ -17,8 +17,3 @@ export const linkedin: Social = {
   name: "Leon Pahole",
   url: "https://www.linkedin.com/in/leon-pahole-089ab1248/",
 };
-
-export const twitter: Social = {
-  name: "@LeonPahole",
-  url: "https://twitter.com/leonpahole",
-};

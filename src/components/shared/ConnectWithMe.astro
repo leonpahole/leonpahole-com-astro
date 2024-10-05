@@ -1,7 +1,6 @@
 ---
-import { linkedin, twitter, email } from "../../data/socials";
+import { linkedin, email } from "../../data/socials";
 import LinkedinIcon from "../../assets/icons/social/LinkedinIcon.astro";
-import TwitterIcon from "../../assets/icons/social/TwitterIcon.astro";
 import EmailIcon from "../../assets/icons/social/EmailIcon.astro";
 
 interface Props {
@@ -16,11 +15,6 @@ const socialIconClasses = "w-5 h-5";
 <div class={"flex items-center gap-2 " + className}>
   <p>Connect with me:</p>
   <ul class="flex items-center gap-4">
-    <li>
-      <a href={twitter.url} target="_blank">
-        <TwitterIcon class={socialIconClasses} />
-      </a>
-    </li>
     <li>
       <a href={linkedin.url} target="_blank">
         <LinkedinIcon class={socialIconClasses} />

@@ -5,7 +5,6 @@ import {
   getImageSrcForSocialPreview,
 } from "../../utils/image";
 import { PersonalTitle, PersonalDescription } from "../../data/presentation";
-import { twitter } from "../../data/socials";
 import GTMHead from "../../components/analytics/GTMHead.astro";
 
 export interface HTMLHeadProps {
@@ -61,7 +60,6 @@ const socialCard = {
       },
     }}
     twitter={{
-      creator: twitter.name,
       title: socialCard.title,
       image: socialCard.image,
       description: socialCard.description,

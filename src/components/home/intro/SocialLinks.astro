@@ -1,10 +1,9 @@
 ---
-import { github, linkedin, email, twitter } from "../../../data/socials";
+import { github, linkedin, email } from "../../../data/socials";
 
 import EmailIcon from "../../../assets/icons/social/EmailIcon.astro";
 import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
 import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
-import TwitterIcon from "../../../assets/icons/social/TwitterIcon.astro";
 
 import SocialLinkContainer from "./SocialLinkContainer.astro";
 
@@ -30,14 +29,6 @@ const iconClass =
     class="social-link"
   >
     <LinkedinIcon class={iconClass} />
-  </SocialLinkContainer>
-
-  <SocialLinkContainer
-    url={twitter.url}
-    alt="Twitter (opens in new tab)"
-    class="social-link"
-  >
-    <TwitterIcon class={iconClass} />
   </SocialLinkContainer>
 
   <SocialLinkContainer url={email.url} alt="Email" class="social-link">
