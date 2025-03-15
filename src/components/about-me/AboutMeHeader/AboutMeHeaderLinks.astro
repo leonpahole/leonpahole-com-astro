@@ -4,7 +4,8 @@ import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
 import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
 import WebIcon from "../../../assets/icons/social/WebIcon.astro";
 
-import { email, linkedin, github } from "../../../data/socials";
+import { email, linkedin, github, substack } from "../../../data/socials";
+import SubstackIcon from "../../../assets/icons/social/SubstackIcon.astro";
 
 const socialListItemClasses = "mr-3 last:m-0 flex-shrink-0";
 const socialListItemLinkClasses = "flex items-center not-italic";
@@ -24,6 +25,12 @@ const socialIconClasses = "h-6 w-6 mr-1";
       <a class={socialListItemLinkClasses} href={email.url}>
         <EmailIcon class={socialIconClasses} />
         <span>{email.name}</span>
+      </a>
+    </li>
+    <li class={socialListItemClasses}>
+      <a class={socialListItemLinkClasses} href={substack.url}>
+        <SubstackIcon class={socialIconClasses} />
+        <span>{substack.name}</span>
       </a>
     </li>
     <li class={socialListItemClasses}>

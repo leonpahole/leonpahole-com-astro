@@ -13,6 +13,11 @@ export const email: Social = {
   url: "mailto:leon.pahole@gmail.com",
 };
 
+export const substack: Social = {
+  name: "Emotionally Intelligent Eng",
+  url: "https://emotionallyintelligentengineer.substack.com",
+};
+
 export const linkedin: Social = {
   name: "Leon Pahole",
   url: "https://www.linkedin.com/in/leon-pahole-089ab1248/",

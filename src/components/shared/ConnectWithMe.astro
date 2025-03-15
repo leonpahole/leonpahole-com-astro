@@ -1,7 +1,8 @@
 ---
-import { linkedin, email } from "../../data/socials";
+import { linkedin, email, substack } from "../../data/socials";
 import LinkedinIcon from "../../assets/icons/social/LinkedinIcon.astro";
 import EmailIcon from "../../assets/icons/social/EmailIcon.astro";
+import SubstackIcon from "../../assets/icons/social/SubstackIcon.astro";
 
 interface Props {
   class?: string;
@@ -23,6 +24,11 @@ const socialIconClasses = "w-5 h-5";
     <li>
       <a href={email.url} target="_blank">
         <EmailIcon class={socialIconClasses} />
+      </a>
+    </li>
+    <li>
+      <a href={substack.url} target="_blank">
+        <SubstackIcon class={socialIconClasses} />
       </a>
     </li>
   </ul>

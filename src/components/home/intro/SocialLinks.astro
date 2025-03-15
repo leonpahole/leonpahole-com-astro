@@ -1,11 +1,12 @@
 ---
-import { github, linkedin, email } from "../../../data/socials";
+import { github, linkedin, email, substack } from "../../../data/socials";
 
 import EmailIcon from "../../../assets/icons/social/EmailIcon.astro";
 import GithubIcon from "../../../assets/icons/social/GithubIcon.astro";
 import LinkedinIcon from "../../../assets/icons/social/LinkedinIcon.astro";
 
 import SocialLinkContainer from "./SocialLinkContainer.astro";
+import SubstackIcon from "../../../assets/icons/social/SubstackIcon.astro";
 
 const iconClass =
   "hover:text-primary hover:scale-105 box-content transition-transform duration-75 px-2.5 h-5 w-5";
@@ -33,6 +34,10 @@ const iconClass =
 
   <SocialLinkContainer url={email.url} alt="Email" class="social-link">
     <EmailIcon class={iconClass} />
+  </SocialLinkContainer>
+
+  <SocialLinkContainer url={substack.url} alt="Substack" class="social-link">
+    <SubstackIcon class={iconClass} />
   </SocialLinkContainer>
 </address>
 
