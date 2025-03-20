@@ -1,19 +1,30 @@
 import type { MarkdownInstance } from "astro";
 
-export interface BlogPostFrontmatter {
+interface BlogPostFrontmatterBase {
   title: string;
   excerpt: string;
   categories: string[];
   date: string;
-  slug: string;
+  minutesRead: number;
+}
+
+interface BlogPostFrontmatterNative extends BlogPostFrontmatterBase {
   cover_image: {
     src: string;
     alt: string;
     credit_text: string;
     credit_link: string;
   };
-  minutesRead: number;
+  slug: string;
 }
+
+interface BlogPostFrontmatterSubstack extends BlogPostFrontmatterBase {
+  substack: string;
+}
+
+export type BlogPostFrontmatter =
+  | BlogPostFrontmatterNative
+  | BlogPostFrontmatterSubstack;
 
 export type BlogPost = MarkdownInstance<BlogPostFrontmatter>;
 

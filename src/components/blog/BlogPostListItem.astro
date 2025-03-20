@@ -7,23 +7,23 @@ interface Props {
 }
 
 const { post } = Astro.props;
+const isSubstack = "substack" in post.frontmatter;
+const href =
+  "substack" in post.frontmatter
+    ? post.frontmatter.substack
+    : `/blog/post/${post.frontmatter.slug}`;
 ---
 
 <article class="py-4 sm:py-5">
   <h3 class="text-h3">
-    <a href={`/blog/post/${post.frontmatter.slug}`}>
-      {post.frontmatter.title}
-    </a>
+    <a href={href}>{post.frontmatter.title}</a>
   </h3>
 
   <BlogPostListItemInfoBar post={post.frontmatter} />
 
   <p class="my-5 text-body">{post.frontmatter.excerpt}</p>
 
-  <a
-    href={`/blog/post/${post.frontmatter.slug}`}
-    class="border-b border-text px-2.5 text-link"
-  >
-    Read full blog post &#x3e;&#x3e;
+  <a href={href} class="border-b border-text px-2.5 text-link">
+    Read full blog post{isSubstack ? " (Substack)" : ""} &#x3e;&#x3e;
   </a>
 </article>
