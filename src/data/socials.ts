@@ -14,8 +14,8 @@ export const email: Social = {
 };
 
 export const substack: Social = {
-  name: "Emotionally Intelligent Eng",
-  url: "https://emotionallyintelligentengineer.substack.com",
+  name: "Substack: Leon Pahole",
+  url: "https://leonpahole.substack.com",
 };
 
 export const linkedin: Social = {
