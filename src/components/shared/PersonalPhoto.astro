@@ -1,15 +1,10 @@
 ---
-import { Picture } from "astro-imagetools/components";
-import { PersonalPhotoPath } from "../../utils/image";
+import { Image } from "astro:assets";
+import PersonalPhotoPath from "/src/assets/images/LeonPahole.png";
 ---
 
 <div
   class="relative isolate h-52 w-52 flex-shrink-0 overflow-hidden rounded-full"
 >
-  <Picture
-    src={PersonalPhotoPath}
-    alt="A headshot of Leon Pahole"
-    sizes="13rem"
-    layout="fill"
-  />
+  <Image src={PersonalPhotoPath} alt="A headshot of Leon Pahole" />
 </div>

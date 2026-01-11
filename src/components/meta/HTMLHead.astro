@@ -1,9 +1,6 @@
 ---
 import { SEO } from "astro-seo";
-import {
-  PersonalPhotoPath,
-  getImageSrcForSocialPreview,
-} from "../../utils/image";
+import PersonalPhotoPath from "/src/assets/images/LeonPahole.png";
 import { PersonalTitle, PersonalDescription } from "../../data/presentation";
 import GTMHead from "../../components/analytics/GTMHead.astro";
 
@@ -32,12 +29,7 @@ const socialCard = {
   title,
   description,
   type: socialCardProp?.type ?? "website",
-  image: new URL(
-    await getImageSrcForSocialPreview(
-      socialCardProp?.image ?? PersonalPhotoPath,
-    ),
-    Astro.site,
-  ).href,
+  image: socialCardProp?.image ?? PersonalPhotoPath.src,
   twitterCard: socialCardProp?.twitterType ?? "summary",
 };
 ---

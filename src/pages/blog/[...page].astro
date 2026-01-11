@@ -1,24 +1,30 @@
 ---
-import type { BlogPostFrontmatter } from "../../types/blog-post";
 import BlogPostList from "../../components/blog/BlogPostList.astro";
 import BlogPostListPagination from "../../components/blog/BlogPostListPagination.astro";
 import Layout from "../../layouts/Layout.astro";
 import type { GetStaticPaths } from "astro";
 import { BlogDescription } from "../../data/presentation";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
-  const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
-    "../../posts/**/*.md",
-  );
+  const allBlogPosts = await getCollection("blog");
 
   allBlogPosts.sort((a, b) => {
-    const aDate = new Date(a.frontmatter.date);
-    const bDate = new Date(b.frontmatter.date);
+    const aDate = new Date(a.data.date);
+    const bDate = new Date(b.data.date);
     return bDate.getTime() - aDate.getTime();
   });
 
   return paginate(allBlogPosts, { pageSize: 10 });
 };
+
+interface Props {
+  page: {
+    currentPage: number;
+    lastPage: number;
+    data: CollectionEntry<"blog">[];
+  };
+}
 
 const { page } = Astro.props;
 

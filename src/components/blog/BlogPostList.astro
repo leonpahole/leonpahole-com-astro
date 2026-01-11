@@ -1,9 +1,9 @@
 ---
-import type { BlogPost } from "../../types/blog-post";
+import type { CollectionEntry } from "astro:content";
 import BlogPostListItem from "./BlogPostListItem.astro";
 
 interface Props {
-  posts: BlogPost[];
+  posts: CollectionEntry<"blog">[];
 }
 
 const { posts } = Astro.props;

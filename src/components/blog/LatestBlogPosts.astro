@@ -1,17 +1,15 @@
 ---
-import type { BlogPostFrontmatter } from "../../types/blog-post";
 import BlogPostList from "./BlogPostList.astro";
+import { getCollection } from "astro:content";
 
-const allBlogPosts = await Astro.glob<BlogPostFrontmatter>(
-  "../../posts/**/*.md",
-);
+const allBlogPosts = await getCollection("blog");
 
 const AmountOfLatestBlogPosts = 3;
 
 const latestBlogPosts = allBlogPosts
   .sort((a, b) => {
-    const aDate = new Date(a.frontmatter.date);
-    const bDate = new Date(b.frontmatter.date);
+    const aDate = new Date(a.data.date);
+    const bDate = new Date(b.data.date);
     return bDate.getTime() - aDate.getTime();
   })
   .slice(0, AmountOfLatestBlogPosts);

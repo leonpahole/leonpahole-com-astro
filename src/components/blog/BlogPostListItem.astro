@@ -1,27 +1,25 @@
 ---
-import type { BlogPost } from "../../types/blog-post";
+import type { CollectionEntry } from "astro:content";
 import BlogPostListItemInfoBar from "./BlogPostListItemInfoBar.astro";
 
 interface Props {
-  post: BlogPost;
+  post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
-const isSubstack = "substack" in post.frontmatter;
+const isSubstack = "substack" in post.data;
 const href =
-  "substack" in post.frontmatter
-    ? post.frontmatter.substack
-    : `/blog/post/${post.frontmatter.slug}`;
+  "substack" in post.data ? post.data.substack : `/blog/post/${post.data.slug}`;
 ---
 
 <article class="py-4 sm:py-5">
   <h3 class="text-h3">
-    <a href={href}>{post.frontmatter.title}</a>
+    <a href={href}>{post.data.title}</a>
   </h3>
 
-  <BlogPostListItemInfoBar post={post.frontmatter} />
+  <BlogPostListItemInfoBar post={post.data} />
 
-  <p class="my-5 text-body">{post.frontmatter.excerpt}</p>
+  <p class="my-5 text-body">{post.data.excerpt}</p>
 
   <a href={href} class="border-b border-text px-2.5 text-link">
     Read full blog post{isSubstack ? " (Substack)" : ""} &#x3e;&#x3e;

@@ -1,12 +1,15 @@
 ---
+import { getCollection, render } from "astro:content";
+import BlogPostLayout from "../../../layouts/BlogPostLayout.astro";
+
 export async function getStaticPaths() {
-  const posts = await Astro.glob("../../../posts/**/*.md");
+  const posts = await getCollection("blog");
 
   return posts
-    .filter((post) => !("substack" in post.frontmatter))
+    .filter((post) => !("substack" in post.data))
     .map((post) => ({
       params: {
-        slug: post.frontmatter.slug,
+        slug: (post.data as { slug: string }).slug,
       },
       props: {
         post,
@@ -14,7 +17,9 @@ export async function getStaticPaths() {
     }));
 }
 
-const { Content } = Astro.props.post;
+const { Content } = await render(Astro.props.post);
 ---
 
-<Content />
+<BlogPostLayout post={Astro.props.post.data}>
+  <Content />
+</BlogPostLayout>
